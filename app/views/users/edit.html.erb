@@ -7,7 +7,7 @@
 	<p><%= pluralize(@user.errors.count, "件のエラー") %>を検出しました。</p>
 	<hr>
 	<p class="mb-0">
-		<%= @user.errors.full_messages.each do |message| %>
+		<% @user.errors.full_messages.each do |message| %>
 		<li><%= message %></li>
 		<% end %>
 	</p>
