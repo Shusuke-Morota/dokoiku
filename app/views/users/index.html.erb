@@ -1,0 +1,20 @@
+<h4>ここはユーザー一覧です</h4>
+
+
+<div class="container mt-5">
+	<div class="row">
+		<div col-6>
+			<% @users.each do |user| %>
+			<div class="card">
+				<%= attachment_image_tag user, :profile_image, :fill, 100, 200, fallback: "no-image.png" %>
+				<div class="card-body">
+					<h5 class="card-title"><%= user.name %></h5>
+					<p class="card-text"><%= user.profile %></p>
+					<%= link_to "このユーザーを詳しく", user_path(current_user.id), class: "btn btn-warning" %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
