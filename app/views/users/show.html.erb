@@ -1,15 +1,43 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
 
 <div class="container mt-5">
-	<div class="row">
-		<div class="col-7 mx-auto">
+	<div class="row" style="text-align: center;">
+		<div class="col-4">
+			<h2>マイページ</h2>
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title"><%= current_user.name %></h5>
-					<h6 class="card-subtitle mb-2 text-muted"><%= current_user.email %></h6>
-					<%= link_to "ユーザー情報編集", edit_user_path %>
+					<%= attachment_image_tag current_user, :profile_image, :fill, 250, 250, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
 				</div>
+				<div class="content">
+					<div class="card-body">
+						<h5 class="card-title"><%= current_user.name %></h5>
+						<p class="card-text"><small class="text-muted"><%= current_user.email %></small></p>
+						<p class="card-text"><%= current_user.profile %></p>
+						<%= link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-warning" %>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="col-8">
+	    	<div class="row">
+			<% @user.articles.each do |article| %>
+						<div class="col-4">
+							<div class="h-50 mt-5">
+								<div class="card">
+									<div class="card-body">
+										<%= attachment_image_tag article, :image,:fill,200,150, format:'jpg', class:"img-fluid" %>
+										<%#= attachment_image_tag article, :image, class: 'img-responsive' %>
+									</div>
+									　　<%= link_to article_path(article) do %>
+									<span class="panel-icon">
+										<i class="far fa-newspaper"></i>
+									</span>
+									この記事を見る
+									　　<% end %>
+								</div>
+							</div>
+						</div>
+			<% end %>
 			</div>
 		</div>
 	</div>
