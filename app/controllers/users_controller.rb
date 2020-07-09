@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @users = User.all
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   	if @user.update(user_params)
   		redirect_to user_path(@user), notice: "ユーザー情報を更新しました。"
   	else
-  		render :edit, alert: "ユーザーの更新に失敗しました。"
+  		render :edit, alert: "ユーザー情報の更新に失敗しました。"
   	end
   end
 
