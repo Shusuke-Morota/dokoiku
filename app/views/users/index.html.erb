@@ -30,6 +30,15 @@
 						<div class="content">
 							投稿記事数：<%= user.articles.count %> 件
 						</div>
+						<div class="content">
+							<% unless user == current_user %>
+							<% if current_user.following?(user) %>
+							<%= link_to 'フォローを外す', unfollow_path(user.id), method: :POST, class: "btn btn-danger" %>
+							<% else %>
+							<%= link_to "フォローする", follow_path(user.id), method: :POST, class: "btn btn-primary" %>
+							<% end %>
+							<% end %>
+						</div>
 					</div>
 				</div>
 			</div>
