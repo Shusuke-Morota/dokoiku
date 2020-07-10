@@ -10,7 +10,11 @@
 				</div>
 				<div class="content">
 					<div class="card-body">
-						<h5 class="card-title" style="border-bottom: solid 1px #E8E8E8;"><%= @user.name %></h5>
+						<h5 class="card-title" style="border-bottom: solid 1px #E8E8E8;">
+							<%= @user.name %><br>
+							<small>フォロー数：<%= @user.follower.count %></small><br>
+							<small>フォロワー数：<%= @user.followed.count %></small><br>
+						</h5>
 
 						<% if @user.id == current_user.id %>
 						<p class="card-text" style="border-bottom: solid 1px #E8E8E8;"><small class="text-muted"><%= @user.email %></small></p>
@@ -26,25 +30,25 @@
 			</div>
 		</div>
 
-	    <div class="col-8">
-	    	<div class="row">
-			<% @user.articles.each do |article| %>
-						<div class="col-4">
-							<div class="h-50 mt-5">
-								<div class="card">
-									<div class="card-body">
-										<%= attachment_image_tag article, :image,:fill,200,150, format:'jpg', class:"img-fluid" %>
-									</div>
-									　　<%= link_to article_path(article) do %>
-									<span class="panel-icon">
-										<i class="far fa-newspaper"></i>
-									</span>
-									この記事を見る
-									　　<% end %>
-								</div>
+		<div class="col-8">
+			<div class="row">
+				<% @user.articles.each do |article| %>
+				<div class="col-4">
+					<div class="h-50 mt-5">
+						<div class="card">
+							<div class="card-body">
+								<%= attachment_image_tag article, :image,:fill,200,150, format:'jpg', class:"img-fluid" %>
 							</div>
+							　　<%= link_to article_path(article) do %>
+							<span class="panel-icon">
+								<i class="far fa-newspaper"></i>
+							</span>
+							この記事を見る
+							　　<% end %>
 						</div>
-			<% end %>
+					</div>
+				</div>
+				<% end %>
 			</div>
 		</div>
 	</div>

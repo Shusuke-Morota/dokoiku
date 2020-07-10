@@ -9,9 +9,25 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :follower, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy
+  has_many :followed, class_name: 'Relationship', foreign_key: 'followed_id', dependent: :destroy
+  has_many :following_user, through: :follower, source: :followed
+  has_many :follower_user, through: :followed, source: :follower
 
   def already_favorited?(article)
     self.favorites.exists?(article_id: article.id)
          	#selfにはcurrent_userが入る。current_userに結びついているいいねの中でarticle_idが今いいねしようとしているarticle.idが存在しているか
- end
+  end
+
+  def follow(user_id) # ユーザーをフォローする
+    follower.create(followed_id: user_id)
+  end
+
+  def unfollow(user_id) # フォローを外す
+    follower.find_by(followed_id: user_id).destroy
+  end
+
+  def following?(user) # フォローしているかを確認する
+    following_user.include?(user)
+  end
 end
