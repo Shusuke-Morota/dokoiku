@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.container {
+	font-family: 'Avenir',sans-serif;
+}
+
 .card-content {
 	text-align: center;
 	font-weight: bold;
@@ -18,4 +22,9 @@
 
 .title a:hover {
 	text-decoration: none;
+}
+
+.panel-icon {
+	text-decoration: none;
+	margin: auto;
 }

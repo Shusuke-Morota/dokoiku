@@ -10,12 +10,17 @@
 				</div>
 				<div class="content">
 					<div class="card-body">
-						<h5 class="card-title"><%= @user.name %></h5>
+						<h5 class="card-title" style="border-bottom: solid 1px #E8E8E8;"><%= @user.name %></h5>
+
 						<% if @user.id == current_user.id %>
-						<p class="card-text"><small class="text-muted"><%= @user.email %></small></p>
+						<p class="card-text" style="border-bottom: solid 1px #E8E8E8;"><small class="text-muted"><%= @user.email %></small></p>
 						<% end %>
-						<p class="card-text"><%= @user.profile %></p>
+
+						<p class="card-text" style="border-bottom: solid 1px #E8E8E8;"><%= @user.profile %></p>
+
+						<% if @user.id == current_user.id %>
 						<%= link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-warning" %>
+						<% end %>
 					</div>
 				</div>
 			</div>
@@ -29,7 +34,6 @@
 								<div class="card">
 									<div class="card-body">
 										<%= attachment_image_tag article, :image,:fill,200,150, format:'jpg', class:"img-fluid" %>
-										<%#= attachment_image_tag article, :image, class: 'img-responsive' %>
 									</div>
 									　　<%= link_to article_path(article) do %>
 									<span class="panel-icon">
