@@ -2,8 +2,11 @@ class CommentsController < ApplicationController
 	def create
 		@article = Article.find(params[:article_id])
 		@comment = @article.comments.build(comment_params)
+		@comment.user_id = current_user.id
 		if @comment.save
 			redirect_to @article
+		else
+			render 'articles/show'
 		end
 	end
 

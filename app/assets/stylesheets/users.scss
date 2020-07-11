@@ -28,3 +28,17 @@
 	text-decoration: none;
 	margin: auto;
 }
+
+
+/*===================
+users/show
+===================*/
+
+.userheader-name small {
+	display: inline;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 16px;
+    text-shadow: 0 2px 4px rgba(0,0,0,.5);
+    vertical-align: middle;
+}
