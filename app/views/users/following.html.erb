@@ -1,0 +1,21 @@
+
+
+<div class="container mt-5">
+	<div class="row">
+		<h3 class="header">
+			<i class="far fa-user"></i><%= @user.name %>さんがフォローしているユーザー
+		</h3>
+	</div>
+	<div class="row mt-5">
+		<% @followings.each do |following| %>
+		<div class="col-3 mx-auto">
+			<table>
+				<tr>
+					<td><%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %></td>
+					<td><%= following.name %></td>
+				</tr>
+			</table>
+		</div>
+		<% end %>
+	</div>
+</div>
