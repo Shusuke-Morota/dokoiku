@@ -33,16 +33,26 @@
 				</div>
 			</div>
 
-			<div class="col-12 mx-auto">
-				<div class="card">
-					<div class="card-body">
-						<h5>コメントフォーム</h5>
-						<%= form_for [@article, @comment] do |f| %>
-						<%= f.text_area :content, rows:"5", class: "form-control",placeholder: "ここにコメント" %>
-						<%= f.submit "コメントする", class: "btn btn-success" %>
-						<% end %>
-					</div>
-				</div>
-			</div>
+			<h2>コメントを入力</h2>
+			<!--引数の順番は親から子へ-->
+			<%= form_for ([@article,@comment]) do |f| %>
+			<p>
+				<%= f.label :content %><br/>
+				<%= f.text_area :content %><br/>
+			</p>
+			<p>
+				<%= f.submit "送信" %>
+			</p>
+			<%end%>
+
+			<h2>コメント一覧</h2>
+			<!--@article.commentsで該当する記事のコメント一覧を取得-->
+			<% @article.comments.each do |comment| %>
+			<p>内容</p>
+			<p><%= comment.content %></p>
+			<!--article_comment_pathヘルパーには親(article)と子(comment)を両方渡す-->
+			<p><%= link_to '削除',article_comments_path(@article, comment),
+			method: :delete, data: {confirm:"本当に削除しますか？"}%></p>
+			<% end %>
 		</div>
 	</div>
