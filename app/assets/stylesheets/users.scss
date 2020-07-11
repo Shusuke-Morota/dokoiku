@@ -42,3 +42,20 @@ users/show
     text-shadow: 0 2px 4px rgba(0,0,0,.5);
     vertical-align: middle;
 }
+
+/*===================
+users/following
+===================*/
+
+.following-user-name a {
+	color: black;
+	justify-content: center;
+}
+
+.following-user-name a:hover {
+	text-decoration: none;
+}
+
+
+
+
