@@ -39,7 +39,7 @@
 						<h5 class="card-title" style="border-bottom: solid 1px #E8E8E8;">
 							<%= @user.name %><br>
 							<small>フォロー数：<%= link_to @user.follower.count, users_following_path(@user) %></small><br>
-							<small>フォロワー数：<%= link_to @user.followed.count %></small><br>
+							<small>フォロワー数：<%= link_to @user.followed.count, users_follower_path(@user) %></small><br>
 						</h5>
 
 						<% if @user.id == current_user.id %>
