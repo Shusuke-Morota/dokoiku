@@ -29,6 +29,10 @@
 	margin: auto;
 }
 
+/*===================
+users/index
+===================*/
+
 
 /*===================
 users/show
@@ -56,6 +60,16 @@ users/following
 	text-decoration: none;
 }
 
+/*===================
+users/follower
+===================*/
 
+.follower-user-name a {
+	color: black;
+}
+
+.follower-user-name a:hover {
+	text-decoration: none;
+}
 
 
