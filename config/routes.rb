@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
 	resources :users
 	resources :articles do
-		resource :favorites, only: [:create, :destroy]
 		resource :comments, only: [:create, :destroy]
+		resource :favorites, only: [:create, :destroy]
 	end
 
 	post 'follow/:id', to: 'relationships#follow', as: 'follow'

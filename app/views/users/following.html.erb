@@ -6,13 +6,13 @@
 			<i class="far fa-user"></i><strong><%= @user.name %></strong>さんがフォローしているユーザー
 		</h3>
 	</div>
-	<div class="row mt-5">
+	<div class="row mt-5" style="margin-left: 150px;">
 		<% @followings.each do |following| %>
-		<div class="col-3 mx-auto" style="border-bottom: solid 1px #E8E8E8;">
+		<div class="col-3" style="border-bottom: solid 1px #E8E8E8; margin: 0 20px 20px 0;">
 			<table>
 				<tbody>
 					<tr>
-						<td class="following-user-profile-image" style="wigth: 10;">
+						<td class="following-user-profile-image">
 							<%= link_to user_path(following) do %>
 							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
 							<% end %>
