@@ -3,11 +3,13 @@
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-6">
-			<div class="card">
+			<div class="card" style="border-bottom: solid 4px lightgray">
 				<div class="card-body">
 					<h5 class="card-title"><%= @article.title %></h5>
 					<p class="card-text"><%= simple_format @article.body %></p> <!-- simple_formatで改行が反映される -->
-					<p class="card-text"><%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg' %></p>
+					<p class="card-text">
+						<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
+					</p>
 					<p class="card-text">
 						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %>
 						</p>
@@ -33,26 +35,48 @@
 				</div>
 			</div>
 
-			<h2>コメントを入力</h2>
-			<!--引数の順番は親から子へ-->
-			<%= form_for ([@article,@comment]) do |f| %>
-			<p>
-				<%= f.label :content %><br/>
-				<%= f.text_area :content %><br/>
-			</p>
-			<p>
-				<%= f.submit "送信" %>
-			</p>
-			<%end%>
+			<!---------------以下コメント機能-------------------->
 
-			<h2>コメント一覧</h2>
-			<!--@article.commentsで該当する記事のコメント一覧を取得-->
-			<% @article.comments.each do |comment| %>
-			<p>内容</p>
-			<p><%= comment.content %></p>
-			<!--article_comment_pathヘルパーには親(article)と子(comment)を両方渡す-->
-			<p><%= link_to '削除',article_comments_path(@article, comment),
-			method: :delete, data: {confirm:"本当に削除しますか？"}%></p>
-			<% end %>
+			<div class="comment-form">
+				<h2 class="comment">コメント</h2>
+				<!--引数の順番は親から子へ-->
+				<%= form_for ([@article,@comment]) do |f| %>
+
+				<div class="form-group">
+					<%= f.text_area :content, class: "form-control", placeholder: "コメントしてみよう" %>
+				</div>
+
+				<div class="comment-button">
+					<%= f.submit "コメントする", class: "btn btn-info" %>
+				</div>
+				<%end%>
+
+				<h2 class="comment-index">コメント一覧</h2>
+
+				<!--@article.commentsで該当する記事のコメント一覧を取得-->
+				<% @article.comments.each do |comment| %>
+
+				<table class="comments">
+
+					<thead>
+						<tr>
+							<th>content</th>
+							<th></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td class="content"><%= comment.content %></td>
+							<td class="comment-delete-button">
+								<%= link_to '削除',article_comments_path(comment),
+								method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<% end %>
+			</div>
 		</div>
 	</div>
