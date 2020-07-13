@@ -33,7 +33,7 @@
 						<div class="favorites">
 							<% unless user == current_user %>
 							<% if current_user.following?(user) %>
-							<%= link_to 'フォローしています', unfollow_path(user.id), method: :POST, class: "btn btn-danger" %>
+							<%= link_to 'フォロー中', unfollow_path(user.id), method: :POST, class: "btn btn-primary" %>
 							<% else %>
 							<%= link_to "フォローする", follow_path(user.id), method: :POST, class: "btn btn-primary" %>
 							<% end %>

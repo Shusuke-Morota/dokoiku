@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # get 'categories/index'
+  # get 'categories/edit'
 	root to: 'home#top'
 	devise_for :users
 
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
 		resource :comments, only: [:create, :destroy]
 		resource :favorites, only: [:create, :destroy]
 	end
+
+	resources :categories, except: [:new, :show]
 
 	post 'follow/:id', to: 'relationships#follow', as: 'follow'
 	post 'unfollow/:id', to: 'relationships#unfollow', as: 'unfollow'
