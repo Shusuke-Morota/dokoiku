@@ -1,35 +1,9 @@
 
-<div class="container">
-	<div class="row">
-		<div class="col-4">
-			<div class="main-content">
-				<div class="userheader">
-					<div class="userheader-bg">
-						<div class="inner">
-							<div class="userheader-name">
-								<h1 itemprop="name"><%= @user.name %></h1>
-								<small><%= @user.email %></small>
-							</div>
-							<div class="userheader-image">
-								<%= attachment_image_tag @user, :profile_image, :fill, 1000, 1000, fallback: "userheader-image.png", format:'png', class:"img-fluid mx-auto" %>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-
 
 <div class="container mt-5">
 	<div class="row" style="text-align: center;">
 		<div class="col-4">
-			<h2>マイページ</h2>
+			<h2 class="page-title">マイページ</h2>
 			<div class="card" style="border-bottom: solid 4px lightgray">
 				<div class="card-body">
 					<%= attachment_image_tag @user, :profile_image, :fill, 250, 250, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
@@ -61,16 +35,21 @@
 				<% @user.articles.each do |article| %>
 				<div class="col-4">
 					<div class="h-50 mt-5">
-						<div class="card">
+						<div class="card" style="border-bottom: solid 4px lightgray">
 							<div class="card-body">
+								<%= link_to article_path(article) do %>
 								<%= attachment_image_tag article, :image,:fill,200,150, format:'jpg', class:"img-fluid" %>
+								<% end %>
 							</div>
-							　　<%= link_to article_path(article) do %>
-							<span class="panel-icon">
-								<i class="far fa-newspaper"></i>
-							</span>
-							この記事を見る
-							　　<% end %>
+
+							<div class="article-show">
+								<%= link_to article_path(article) do %>
+								<span class="panel-icon">
+									<i class="far fa-newspaper"></i>
+								</span>
+								この記事を見る
+								　　<% end %>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 <section class="title">
 	<div class="body">
-		<div class="container mt-5">
+		<div class="container mt-3">
 			<h2 class="page-title">ユーザー一覧</h2>
 		</div>
 	</div>
@@ -14,7 +14,7 @@
 				<div class="card" style="border-bottom: solid 4px lightgray">
 					<div class="card-content">
 						<div class="card-image">
-							<figure class="image">
+							<figure class="image" style="margin: 5px;">
 								<%= link_to user_path(user) do %>
 								<%= attachment_image_tag user, :profile_image, :fill, 260, 260, fallback: "no-image.png", class:"img-fluid" %>
 								<% end %>
@@ -24,11 +24,13 @@
 					<div class="card-content">
 						<div class="media">
 							<div class="media-content">
-								<div class="title"><%= link_to user.name, user_path(user) %></div>
+								<div class="index-username">
+									<%= link_to user.name, user_path(user) %>
+								</div>
 							</div>
 						</div>
 						<div class="article-count">
-							投稿記事数：<%= user.articles.count %> 件
+							プラン投稿：<%= user.articles.count %> 件
 						</div>
 						<div class="favorites">
 							<% unless user == current_user %>

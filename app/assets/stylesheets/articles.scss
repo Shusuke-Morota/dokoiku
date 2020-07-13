@@ -2,6 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*===================
+   articles/index
+===================*/
+
+.index-title {
+	text-align: center;
+}
+
+.index-body {
+    font-weight: bold;
+    line-height: 125px;
+	text-align: center;
+}
+
+.article-title a {
+	color: black;
+}
+
+.article-title a:hover {
+	text-decoration: none;
+}
+
+.article-username a {
+	color: black;
+}
+
+.article-username a:hover {
+	text-decoration: none;
+}
+
 /*ページネーション自体のデザイン*/
 .pagination>li>a {
   border: none;                     /*枠線をなくす*/
@@ -20,7 +50,7 @@
 }
 
 /*===================
-articles/show
+    articles/show
 ===================*/
 
 .comment-form {
