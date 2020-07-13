@@ -10,7 +10,8 @@
 						<th scope="col">タイトル</th>
 						<th scope="col">写真</th>
 						<th scope="col">投稿者</th>
-						<th scope="col">  </th>
+						<th scope="col"></th>
+						<th scope="col">カテゴリー</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -31,6 +32,7 @@
 							<% end %>
 							<%= article.favorites.count %>
 						</td>
+						<td><%= article.category.name %></td>
 					</tr>
 					<% end %>
 				</tbody>
