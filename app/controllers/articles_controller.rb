@@ -47,6 +47,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-  	params.require(:article).permit(:title, :body, :image)  #image_idからimageに変えたら投稿はできたけど写真が投稿できない
+  	params.require(:article).permit(:title, :body, :image, :category_id)
   end
 end
