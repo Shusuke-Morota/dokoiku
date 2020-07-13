@@ -30,25 +30,41 @@
 }
 
 /*===================
-users/index
+    users/index
 ===================*/
 
+.page-title {
+	font-weight: bold;
+}
 
-/*===================
-users/show
-===================*/
+.index-username a {
+	color: black;
+}
 
-.userheader-name small {
-	display: inline;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-left: 16px;
-    text-shadow: 0 2px 4px rgba(0,0,0,.5);
-    vertical-align: middle;
+.index-username a:hover {
+	text-decoration: none;
 }
 
 /*===================
-users/following
+     users/show
+===================*/
+
+.article-show {
+	font-weight: bold;
+	margin-left: 35px;
+}
+
+.article-show a {
+	color: black;
+}
+
+.article-show a:hover {
+	text-decoration: none;
+}
+
+
+/*===================
+   users/following
 ===================*/
 
 .following-user-name a {
@@ -61,7 +77,7 @@ users/following
 }
 
 /*===================
-users/follower
+   users/follower
 ===================*/
 
 .follower-user-name a {
