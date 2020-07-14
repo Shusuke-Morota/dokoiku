@@ -11,32 +11,33 @@
 						<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 					</p>
 					<p class="card-text">
-						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %>
-						</p>
+						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %></small>>
+					</p>
 
-						<% if current_user.already_favorited?(@article) %>
-						<%= link_to article_favorites_path(@article), method: :delete do %>
-						<i class="fas fa-thumbs-up"></i>
-						<% end %>
+					<% if current_user.already_favorited?(@article) %>
+					<%= link_to article_favorites_path(@article), method: :delete do %>
+					<i class="fas fa-thumbs-up"></i>
+					<% end %>
 
-						<% else %>
-						<%= link_to article_favorites_path(@article), method: :post do %>
-						<i class="far fa-thumbs-up"></i>
-						<% end %>
-						<% end %>
+					<% else %>
+					<%= link_to article_favorites_path(@article), method: :post do %>
+					<i class="far fa-thumbs-up"></i>
+					<% end %>
+					<% end %>
 
-						<%= @article.favorites.count %>
+					<%= @article.favorites.count %>
 
-						<% if @article.user == current_user %> <!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
-						<%= link_to "編集", edit_article_path(@article), class: "btn btn-success" %>
-						<%= link_to "削除", article_path(@article), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
-						<% end %>
-					</div>
+					<% if @article.user == current_user %> <!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
+					<%= link_to "編集", edit_article_path(@article), class: "btn btn-success" %>
+					<%= link_to "削除", article_path(@article), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
+					<% end %>
 				</div>
 			</div>
+		</div>
 
-			<!---------------以下コメント機能-------------------->
+		<!---------------以下コメント機能-------------------->
 
+		<div class="col-6">
 			<div class="comment-form">
 				<h2 class="comment">コメント</h2>
 				<!--引数の順番は親から子へ-->
@@ -46,37 +47,26 @@
 					<%= f.text_area :content, class: "form-control", placeholder: "コメントしてみよう" %>
 				</div>
 
-				<div class="comment-button">
-					<%= f.submit "コメントする", class: "btn btn-info" %>
+				<div class="comment-button" style="margin-bottom: 35px">
+					<%= f.submit "コメントする", class: "btn btn-info btn-block" %>
 				</div>
 				<%end%>
-
-				<h2 class="comment-index">コメント一覧</h2>
-
-				<!--@article.commentsで該当する記事のコメント一覧を取得-->
-				<% @article.comments.each do |comment| %>
-
-				<table class="comments">
-
-					<thead>
-						<tr>
-							<th>content</th>
-							<th></th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr>
-							<td class="content"><%= comment.content %></td>
-							<td class="comment-delete-button">
-								<%= link_to '削除',article_comments_path(comment),
-								method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
-				<% end %>
 			</div>
+
+			<h2 class="comment-index">コメント一覧</h2>
+
+			<!--@article.commentsで該当する記事のコメント一覧を取得-->
+			<% @article.comments.each do |comment| %>
+
+			<ul>
+				<li><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></li>
+				<li>
+					<%= comment.content %>
+					<%= link_to '削除',article_comments_path(comment),
+					method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
+				</li>
+			</ul>
+			<% end %>
 		</div>
 	</div>
+</div>
