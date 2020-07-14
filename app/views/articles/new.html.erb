@@ -19,12 +19,12 @@
 			<h2 style="font-weight: bold;">新規投稿</h2>
 			<%= form_for @article do |f| %>
 			<div class="form-group">
-				<label>記事のタイトル</label>
+				<label>プランのタイトル</label>
 				<%= f.text_field :title, class: "form-control" %>
 			</div>
 
 			<div class="form-group">
-				<label>記事の本文</label>
+				<label>プランの本文</label>
 				<%= f.text_area :body, class: "form-control" %>
 			</div>
 
@@ -34,12 +34,12 @@
 			</div>
 
 			<div class="form-group">
-				<label>記事の写真</label>
+				<label>プランの写真</label>
 				<%= f.attachment_field :image, class: "input" %>
 			</div>
 
 			<div class="actions-right">
-				<%= f.submit "投稿", class: "btn btn-success" %>
+				<%= f.submit "投稿する", class: "btn btn-success btn-block" %>
 			</div>
 			<% end %>
 		</div>
