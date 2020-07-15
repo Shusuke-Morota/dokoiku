@@ -11,7 +11,7 @@
 						<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 					</p>
 					<p class="card-text">
-						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %></small>>
+						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %></small>
 					</p>
 
 					<% if current_user.already_favorited?(@article) %>
@@ -58,14 +58,21 @@
 			<!--@article.commentsで該当する記事のコメント一覧を取得-->
 			<% @article.comments.each do |comment| %>
 
-			<ul>
-				<li><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></li>
-				<li>
-					<%= comment.content %>
-					<%= link_to '削除',article_comments_path(comment),
-					method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
-				</li>
-			</ul>
+			<div class="card" style="height: 150px;">
+				<h5 class="card-header">
+					<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
+					<small class="text-muted">コメント時間：<%= @article.comments.created_at.strftime("%Y-%m-%d") %></small>
+				</h5>
+				<div class="card-body">
+					<div class="card-text">
+						<%= comment.content %>
+						<div class="card-button" style="text-align: right;">
+							<%= link_to '削除',article_comments_path(comment),
+							method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
+						</div>
+					</div>
+				</div>
+			</div>
 			<% end %>
 		</div>
 	</div>
