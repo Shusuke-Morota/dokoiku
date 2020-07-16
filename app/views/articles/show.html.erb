@@ -11,7 +11,7 @@
 						<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 					</p>
 					<p class="card-text">
-						<small class="text-muted">更新日：<%= @article.updated_at.strftime("%Y-%m-%d") %></small>
+						<small class="text-muted">投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %></small>
 					</p>
 
 					<% if current_user.already_favorited?(@article) %>
@@ -28,8 +28,10 @@
 					<%= @article.favorites.count %>
 
 					<% if @article.user == current_user %> <!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
-					<%= link_to "編集", edit_article_path(@article), class: "btn btn-success" %>
-					<%= link_to "削除", article_path(@article), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
+					<div class="article-button" style="text-align: right;">
+						<%= link_to "編集", edit_article_path(@article), class: "btn btn-success" %>
+						<%= link_to "削除", article_path(@article), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
+					</div>
 					<% end %>
 				</div>
 			</div>
@@ -61,11 +63,15 @@
 			<div class="card" style="height: 150px;">
 				<h5 class="card-header">
 					<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
-					<small class="text-muted">コメント時間：<%= @article.comments.created_at.strftime("%Y-%m-%d") %></small>
+					<time datetime="<%= @article.created_at %>" style="font-size: 13px;">
+						<%= time_ago_in_words(comment.created_at) %>前
+					</time>
 				</h5>
 				<div class="card-body">
 					<div class="card-text">
-						<%= comment.content %>
+						<%= truncate(comment.content, length: 28) do %>
+						<%= link_to "続きを読む", user_path(comment.user.id) %>
+						<% end %>
 						<div class="card-button" style="text-align: right;">
 							<%= link_to '削除',article_comments_path(comment),
 							method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
