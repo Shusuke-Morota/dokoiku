@@ -29,9 +29,14 @@
 							<%= link_to article.user.name, user_path(article.user_id) %>
 						</td>
 
-						<td class="favorites_buttons_<%= article.id %>">
-							<%= render partial: "favorites/favorite", locals: { article: article} %>
-						</td>
+　　　　　　　　　　　　　  <!-------------いいね機能-------------->
+                        <td>
+                        	<span id='favorites_buttons_<%= article.id %>'></span>
+                        	<%= render partial: "favorites/favorite", locals: { article: article } %>
+                        	<%= article.favorites.count %>
+                        </td>
+						<!-------------いいね機能-------------->
+
 						<td><%= article.category.name %></td>
 					</tr>
 					<% end %>

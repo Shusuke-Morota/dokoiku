@@ -32,15 +32,14 @@
 						<div class="article-count">
 							プラン投稿：<%= user.articles.count %> 件
 						</div>
+					<!-----------フォロー機能------------>
 						<div class="favorites">
 							<% unless user == current_user %>
-							<% if current_user.following?(user) %>
-							<%= link_to 'フォロー中', unfollow_path(user.id), method: :POST, class: "btn btn-primary" %>
-							<% else %>
-							<%= link_to "フォローする", follow_path(user.id), method: :POST, class: "btn btn-primary" %>
-							<% end %>
+							<span id="follow-button_#{ user.id }"></span>
+							<%= render 'users/follow-button', user: user %>
 							<% end %>
 						</div>
+					<!-----------フォロー機能------------>
 					</div>
 				</div>
 			</div>
