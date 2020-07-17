@@ -1,12 +1,17 @@
 class FavoritesController < ApplicationController
 
-	def create #current_userに結びついているいいねを作成している。いいねしたら、前の画面に遷移する。 ex)詳細画面でいいねしたら詳細画面へ
-		@favorites = current_user.favorites.create(article_id: params[:article_id])
+	before_action :article_params
+	def create
+		favorite = current_user.favorites.new(article_id: @article.id)
+		favorite.save
 	end
 
 	def destroy
+		@favorite = Favorite.find_by(user_id: current_user.id, article_id: @article.id).destroy
+	end
+
+	private
+	def article_params
 		@article = Article.find(params[:article_id])
-		@favorite = current_user.favorites.find_by(article_id: @article.id)
-		@favorite.destroy
 	end
 end
