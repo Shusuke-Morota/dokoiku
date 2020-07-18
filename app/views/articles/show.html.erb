@@ -64,13 +64,18 @@
 
 				<div class="card-body">
 					<div class="card-text">
-						<%= truncate(comment.content, length: 28) do %>
-						<%= link_to "続きを読む", user_path(comment.user.id) %>
-						<% end %>
+						<div class="collapse" id="comment-collapse">
+							<%= truncate(comment.content, length: 28) do %>
+							<%= link_to "続きを読む", user_path(comment.user.id) %>
+							<% end %>
+						</div>
+
+						<% if comment.user == current_user %>
 						<div class="card-button" style="text-align: right;">
 							<%= link_to '削除',article_comments_path(comment),
 							method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
 						</div>
+						<% end %>
 					</div>
 				</div>
 			</div>
