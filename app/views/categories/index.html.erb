@@ -14,7 +14,8 @@
 			<table class="table" style="margin-left: 120px">
 				<thead>
 					<tr>
-						<th>カテゴリー名</th>
+						<th></th>
+						<th style="text-align: center;">カテゴリー名</th>
 						<th></th>
 						<th></th>
 					</tr>
@@ -23,7 +24,12 @@
 				<tbody>
 					<% @categories.each do |category| %>
 					<tr>
-						<td><%= category.name %></td>
+						<td>
+							<%= attachment_image_tag category, :category_image, :fill, 50, 50, format: "png" %>
+						</td>
+						<td style="text-align: center;">
+							<%= category.name %>
+						</td>
 						<td>
 							<%= link_to '編集', edit_category_path(category), class: 'btn-sm btn-primary' %>
 						</td>

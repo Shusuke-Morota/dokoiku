@@ -8,6 +8,9 @@
 			<%= f.label :name, 'カテゴリー名' %><br>
 			<%= f.text_field :name, class:'form-control' %><br>
 
+			<%= f.label :category_image, "カテゴリー画像" %>
+			<%= f.attachment_field :category_image, class: "form-control" %>
+
 			<%= f.submit '保存する', class: 'btn btn-primary btn-block' %>
 			<% end %>
 		</div>
