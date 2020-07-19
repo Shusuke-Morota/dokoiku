@@ -14,9 +14,9 @@
 						<small class="text-muted">投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %></small>
 					</p>
 
-					<span id='favorites_buttons_<%= @article.id %>'></span>
-					<%= render partial: "favorites/favorite", locals: { article: @article } %>
-					<%= @article.favorites.count %>
+					<span id='favorites_buttons_<%= @article.id %>'>
+						<%= render partial: "favorites/favorite", locals: { article: @article } %>
+					</span>
 
 					<% if @article.user == current_user %> <!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
 					<div class="article-button" style="text-align: right;">
