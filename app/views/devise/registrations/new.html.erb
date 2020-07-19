@@ -1,8 +1,8 @@
 
 <style>
   .fa {
-  font-weight: 501;
-}
+    font-weight: 501;
+  }
 </style>
 
 
@@ -39,11 +39,13 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "登録する", class: "btn btn-success" %>
+          <%= f.submit "登録する", class: "btn btn-success btn-block" %>
         </div>
         <% end %>
 
-        <p>既に登録されている方は</p><%= render "devise/shared/links" %>
+        <div class="already-sign-up" style="margin-top: 30px">
+          <p>既に登録されている方は<%= render "devise/shared/links" %></p>
+        </div>
       </div>
     </div>
   </div>

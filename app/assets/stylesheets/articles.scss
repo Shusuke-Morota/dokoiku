@@ -35,19 +35,25 @@
 /*ページネーション自体のデザイン*/
 .pagination>li>a {
   border: none;                     /*枠線をなくす*/
-  color: #696969;                   /*文字の色を変える*/
+  color: black;                   /*文字の色を変える*/
 }
 
 /* 表示しているページ番号のデザイン */
 .pagination>.active>a {
-  background: black;                /*背景の色を変える*/
-  border-radius: 20px;              /*角を丸くする*/
+  background-color: tomato;                /*背景の色を変える*/
+  border-radius: 50%;              /*角を丸くする*/
+}
+
+.page-item.active .page-link {
+	background-color: tomato;                /*背景の色を変える*/
 }
 
 /*ホバー時のデザイン*/
 .pagination>li>a:hover {
   border-radius: 15px;              /*角を丸くする*/
 }
+
+
 
 /*===================
     articles/show

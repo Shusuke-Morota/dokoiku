@@ -6,12 +6,17 @@
 .btn {
   margin-bottom: 15px;
 }
+
+/*===================
+  top / col-3(左側)
+===================*/
+
 .col-6.category {
-  padding-left:0px;
-  padding-right:30px;
+  padding-left: 20px;
+  padding-right: 13px;
 }
 
-.p-top_heading {
+.category-header {
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -23,14 +28,15 @@
 }
 
 .category-title img {
-	opacity: 0.6;
   border-radius: 8px;
+	filter: brightness(50%);
   margin-right: 30px;
 }
 
 .category-title p {
   position: absolute;
-  font-size: 15px;
+  color: white;
+  font-size: 13px;
   font-weight: bold;
   top: 50%;
   left: 50%;
@@ -40,6 +46,45 @@
   margin:0;
   padding:0;
 }
+
+/*===================
+  top / col-6(真ん中)
+===================*/
+
+.new-articles {
+  font-weight: bold;
+}
+
+.card-body {
+  border-radius: 5px;
+}
+
+.card-title img {
+  border-radius: 50px;
+}
+
+.top-user-name {
+  color: black;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.top-article-title {
+  position: relative;
+}
+
+.card-image {
+  margin-left: 100px;
+  position: relative;
+  display:inline-block;
+}
+
+.card-image img {
+  border: solid 2px tomato;
+  border-radius: 8px;
+}
+
+
 
 
 
