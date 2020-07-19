@@ -1,4 +1,6 @@
-
+<div class="row">
+	<%= image_tag "night-bg.jpg", class: "img-responsive" %>
+</div>
 
 
 
@@ -39,12 +41,11 @@
 						</div>
 					</h6>
 
-					<div class="card-image">
+					<div class="card-image relative">
 						<%= link_to article_path(article) do %>
 						<%= attachment_image_tag article, :image, :fill, 350, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 						<% end %>
-
-						<p>【 <%= article.title %> 】</p>
+						<p><%= article.title %></p>
 					</div>
 				</div>
 			</div>
