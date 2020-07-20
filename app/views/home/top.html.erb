@@ -1,5 +1,9 @@
 <div class="row">
-	<%= image_tag "night-bg.jpg", class: "img-responsive" %>
+	<div class="slider">
+		<%= image_tag "night-bg.jpg", class: "top-search-bg" %>
+		<%= image_tag "green-bg.jpg", class: "top-search-bg" %>
+		<%= image_tag "desert-bg.jpg", class: "top-search-bg" %>
+	</div>
 </div>
 
 
@@ -46,10 +50,11 @@
 						<%= attachment_image_tag article, :image, :fill, 350, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 						<% end %>
 						<p><%= article.title %></p>
+						<p1><%= truncate(article.body, length: 20) %></p>
+						</div>
 					</div>
 				</div>
+				<% end %>
 			</div>
-			<% end %>
 		</div>
 	</div>
-</div>
