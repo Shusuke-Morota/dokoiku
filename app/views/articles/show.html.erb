@@ -8,7 +8,9 @@
 					<h5 class="card-title"><%= @article.title %></h5>
 					<p class="card-text"><%= simple_format @article.body %></p> <!-- simple_formatで改行が反映される -->
 					<p class="card-text">
-						<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
+						<div class="slider">
+							<%= attachment_image_tag @article, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
+						</div>
 					</p>
 					<p class="card-text">
 						<small class="text-muted">投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %></small>
