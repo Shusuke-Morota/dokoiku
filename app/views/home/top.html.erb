@@ -1,5 +1,5 @@
 <div class="row relative">
-	<div class="slider">
+	<div class="slider1">
 		<%= image_tag "night-bg.jpg", class: "top-search-bg" %>
 		<%= image_tag "green-bg.jpg", class: "top-search-bg" %>
 		<%= image_tag "desert-bg.jpg", class: "top-search-bg" %>
@@ -14,9 +14,9 @@
 
 
 <div class="container mt-5">
-	<h3 class="category-header">カテゴリーから探す</h3>
 	<div class="row">
 		<div class="col-3">
+			<h3 class="category-header">カテゴリーから探す</h3>
 			<div class="row">
 				<% @categories.each do |category| %>
 				<div class="col-6 category">
@@ -50,7 +50,7 @@
 						</div>
 					</h6>
 
-					<div class="card-image relative">
+					<div class="card-plan-image relative">
 						<%= link_to article_path(article) do %>
 						<%= attachment_image_tag article, :image, :fill, 350, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 						<% end %>
