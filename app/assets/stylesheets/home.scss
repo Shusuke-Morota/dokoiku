@@ -6,6 +6,27 @@
   top / search部分
 ===================*/
 
+.relative {
+  position: relative;
+
+  h2 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-weight: bold;
+  color: white;
+
+  p {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  }
+  }
+}
+
 .slider {
   height: 380px;
   width: 100%;
