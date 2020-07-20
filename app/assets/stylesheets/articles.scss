@@ -74,3 +74,34 @@
 .comment-user-profile-image img {
 	border-radius: 50%;
 }
+
+/*===================
+    articles/new
+===================*/
+
+#cover-image {
+	cursor: pointer;
+}
+
+.article-image {
+    border-radius: 5px;
+	filter: brightness(50%);
+	height: 319px;
+	width: 100%;
+}
+
+.relative {
+	position: relative;
+
+	i {
+	   position: absolute;
+	   top: 43%;
+	   left: 44%;
+	   color: white;
+	   font-size: 55px;
+	}
+}
+
+#article_image {
+	display: none;
+	}
