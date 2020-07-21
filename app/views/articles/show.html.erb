@@ -8,11 +8,15 @@
 					<h5 class="card-title"><%= @article.title %></h5>
 					<p class="card-text"><%= simple_format @article.body %></p> <!-- simple_formatで改行が反映される -->
 					<p class="card-text">
-						<% if @article.article_images.present? %>
-						<% @article.article_images.each do |article_image| %>
-						<%= attachment_image_tag article_image, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
-						<% end %>
-						<% end %>
+						<div class="slider-area2">
+							<div class="slider2">
+								<% if @article.article_images.present? %>
+								<% @article.article_images.each do |article_image| %>
+								<%= attachment_image_tag article_image, :image, :fill, 500, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
+								<% end %>
+								<% end %>
+							</div>
+						</div>
 					</p>
 					<p class="card-text">
 						<small class="text-muted">投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %></small>
