@@ -4,10 +4,10 @@
 
 $(document).on 'turbolinks:load', ->
  $('#cover-image').click ->
-  $('#article_image').click()
+  $('#article_article_images_images').click()
   false
 
- $('#article_image').on 'change',(e) ->
+ $('#article_article_images_images').on 'change',(e) ->
     file = e.target.files[0]
     reader = new FileReader
     $preview = $('.article-image')
