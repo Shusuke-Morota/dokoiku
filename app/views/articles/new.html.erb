@@ -39,7 +39,7 @@
 				<i class="fa fa-camera"></i>
 			</div>
 
-			<%= f.attachment_field :image %>
+			<%= f.attachment_field :article_images_images, class: "input", multiple: true %>
 
 			<div class="actions-right">
 				<%= f.submit "投稿する", class: "btn btn-success btn-block" %>
