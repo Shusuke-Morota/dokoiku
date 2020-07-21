@@ -19,8 +19,9 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(function() {
-	$('.slider1').slick({
+
+$(document).on('turbolinks:load', function() {
+　$('.slider1').slick({
 		fade: true,
 		speed: 3000,
 		autoplay: true,
