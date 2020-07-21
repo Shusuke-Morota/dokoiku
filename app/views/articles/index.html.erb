@@ -22,7 +22,7 @@
 						</td>
 
 						<td>
-							<%= attachment_image_tag article, :image, :fill, 100, 100, format: 'jpeg' %>
+							<%= attachment_image_tag article.article_images.first, :image, :fill, 100, 100, format: 'jpeg' %>
 						</td>
 
 						<td class="article-username">
