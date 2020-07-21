@@ -20,14 +20,27 @@
 //= require_tree .
 
 
+
+// top画面のスライドショー
+
 $(document).on('turbolinks:load', function() {
 　$('.slider1').slick({
+	    infinite: true,
 		fade: true,
 		speed: 3000,
 		autoplay: true,
 		autoplaySpeed: 5000,
-		prevArrow: '<img src="前への矢印画像のパス" class="slide-arrow prev-arrow">',
-		nextArrow: '<img src="次への矢印画像のパス" class="slide-arrow next-arrow">'
+	});
+});
+
+
+// articles-show
+
+$(document).on('turbolinks:load', function() {
+　$('.slider2').slick({
+	    dots: true,
+	    arrows: true,
+	    accessibility: true,
 	});
 });
 
