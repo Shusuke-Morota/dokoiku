@@ -76,6 +76,23 @@
 }
 
 /*===================
+ articles/show/slick
+===================*/
+
+.slick-dots {
+  li {
+    font-size: 20px !important;
+    button:before {
+      content: "●" !important;
+      font-size: 25px !important;
+      color: tomato !important;
+      margin-top: 10px !important;
+    }
+  }
+}
+
+
+/*===================
     articles/new
 ===================*/
 
