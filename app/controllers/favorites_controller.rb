@@ -1,6 +1,11 @@
 class FavoritesController < ApplicationController
 
 	before_action :article_params
+
+    def index
+    	@favorites = Favorite.all
+    end
+
 	def create
 		favorite = current_user.favorites.new(article_id: @article.id)
 		favorite.save
