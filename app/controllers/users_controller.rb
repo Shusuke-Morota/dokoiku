@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @users = User.all
+    @search = User.search(params[:q])
+    @users = @search.result
   end
 
   def show

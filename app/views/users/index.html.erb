@@ -2,6 +2,13 @@
 	<div class="body">
 		<div class="container mt-3">
 			<h2 class="page-title">ユーザー一覧</h2>
+			<%= search_form_for @search do |f| %>
+			<div class="form-group">
+				<%= f.label :name_cont, "Name" %>
+				<%= f.text_field :name_cont, class: "form-control" %>
+			</div>
+			<div class="actions"><%= f.submit "Search" %></div>
+			<% end %>
 		</div>
 	</div>
 </section>
@@ -32,14 +39,14 @@
 						<div class="article-count">
 							プラン投稿：<%= user.articles.count %> 件
 						</div>
-					<!-----------フォロー機能------------>
+						<!-----------フォロー機能------------>
 						<div class="favorites" style="margin-bottom: 10px;">
 							<% unless user == current_user %>
 							<span id="follow-button_#{ user.id }"></span>
 							<%= render 'users/follow-button', user: user %>
 							<% end %>
 						</div>
-					<!-----------フォロー機能------------>
+						<!-----------フォロー機能------------>
 					</div>
 				</div>
 			</div>
