@@ -50,6 +50,7 @@
 						</div>
 					</h6>
 
+
 					<div class="card-plan-image relative">
 						<% if article.article_images.present? %>
 						<%= link_to article_path(article) do %>
@@ -57,16 +58,15 @@
 						<% end %>
 						<% end %>
 						<p><%= article.title %></p>
-						<p1><%= truncate(article.body, length: 20) %></p>
-						</div>
+						<p class="new-articles-body"><%= truncate(article.body, length: 20) %></p>
 					</div>
 				</div>
-				<% end %>
 			</div>
+			<% end %>
 		</div>
 
 		<div class="col-3">
-			<h3 class="article-ranks">プランキング</h3>
+			<h3 class="article-ranks">いいねランキング</h3>
 			<% @all_ranks.each.with_index(1) do |article, i| %>
 			<table class="table table-hover">
 				<thead class="ranks-title">
@@ -77,10 +77,22 @@
 					</tr>
 				</thead>
 
-				<tbody>
+				<tbody class="ranks-body">
 					<tr>
-						<td><%= attachment_image_tag article.article_images.first, :image, :fill, 70, 70, format: 'jpeg' %></td>
-						<td><%= article.category.name %></td>
+						<td>
+							<%= link_to article_path(article) do %>
+							<%= attachment_image_tag article.article_images.first, :image, :fill, 70, 70, format: 'jpeg' %>
+							<% end %>
+						</td>
+						<td>
+							<div class="ranks-body-category">
+								<i class="fas fa-flag"></i>：<%= article.category.name %>
+							</div>
+
+							<div class="ranks-body-article-body">
+								<i class="fas fa-pen"></i>：<%= truncate(article.body, length: 8) %>
+							</div>
+						</td>
 					</tr>
 				</tbody>
 			</table>

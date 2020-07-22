@@ -128,12 +128,43 @@
     font-size: 20px;
   }
 
-  p1 {
+  .new-articles-body {
     position: absolute;
     top: 270px;
     left: 20px;
     color: white;
   }
+}
+
+/*===================
+  top / col-3(右側)
+===================*/
+
+.table table-hover {
+  margin-bottom: 0px;
+}
+
+.article-ranks {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.ranks-body-category {
+  font-size: 12px;
+  margin-bottom: 35px;
+}
+
+.ranks-body-category i {
+  color: tomato;
+}
+
+.ranks-body-article-body {
+  font-size: 12px;
+}
+
+.ranks-body-article-body i {
+  color: tomato;
 }
 
 
