@@ -6,6 +6,16 @@
   top / search部分
 ===================*/
 
+.slider1 {
+  height: 380px;
+  width: 100%;
+  filter: brightness(50%);
+
+  .top-search-bg {
+  height: 350px;
+  }
+}
+
 .relative {
   position: relative;
 
@@ -25,17 +35,19 @@
   font-size: 20px;
   }
   }
-}
 
-.slider1 {
-  height: 380px;
-  width: 100%;
-  filter: brightness(50%);
-
-  .top-search-bg {
-  height: 350px;
+  .top-plan-seach {
+  position: absolute;
+  top: 55%;
+  left: 37%;
   }
 }
+
+input#q_title_cont.form-control {
+  width: 300px;
+}
+
+
 
 
 /*===================

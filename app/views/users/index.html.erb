@@ -4,10 +4,12 @@
 			<h2 class="page-title">ユーザー一覧</h2>
 			<%= search_form_for @search do |f| %>
 			<div class="form-group">
-				<%= f.label :name_cont, "Name" %>
-				<%= f.text_field :name_cont, class: "form-control" %>
+				<%= f.label :name_cont, "ユーザー検索" %>
+				<%= f.text_field :name_cont, class: "form-control", placeholder: "ユーザー名" %>
 			</div>
-			<div class="actions"><%= f.submit "Search" %></div>
+			<button type="submit">
+				<i class="fas fa-search"></i> 検索
+			</button>
 			<% end %>
 		</div>
 	</div>
