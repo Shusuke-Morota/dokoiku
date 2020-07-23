@@ -1,7 +1,10 @@
 class ArticlesController < ApplicationController
 	before_action :authenticate_user!, except: [:index]
   def index
-  	@articles = Article.all.page(params[:page]).per(10)
+  	#@articles = Article.all.page(params[:page]).per(10)
+    query = { title_cont: params[:q] }
+    @q = Article.ransack(query)
+    @articles = @q.result.page(params[:page]).per(10)
   end
 
   def show
