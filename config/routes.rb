@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 		resource :favorites, only: [:index, :create, :destroy]
 	end
 
-	resources :categories, except: [:new, :show]
+	resources :categories, except: [:new]
 
 	post 'follow/:id', to: 'relationships#follow', as: 'follow'
 	post 'unfollow/:id', to: 'relationships#unfollow', as: 'unfollow'
