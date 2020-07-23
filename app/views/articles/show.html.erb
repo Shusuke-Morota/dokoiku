@@ -59,7 +59,7 @@
 			<!--@article.commentsで該当する記事のコメント一覧を取得-->
 			<% @article.comments.each do |comment| %>
 
-			<div class="card" style="height: 165px;">
+			<div class="card">
 				<h5 class="card-header">
 					<div class="comment-user-profile-image" style="border-radius: 50%;">
 						<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50 %>
@@ -72,16 +72,13 @@
 
 				<div class="card-body">
 					<div class="card-text">
-						<div class="collapse" id="comment-collapse">
-							<%= truncate(comment.content, length: 28) do %>
-							<%= link_to "続きを読む", user_path(comment.user.id) %>
-							<% end %>
-						</div>
+						<%= comment.content %>
 
 						<% if comment.user == current_user %>
 						<div class="card-button" style="text-align: right;">
-							<%= link_to '削除',article_comments_path(comment),
-							method: :delete, data: {confirm:"本当に削除しますか？"}, class: "btn btn-danger" %>
+							<%= link_to article_comments_path(comment), method: :delete, data: {confirm:"本当に削除しますか？"} do %>
+							<span class="fa fa-trash trash-btn"></span>
+							<% end %>
 						</div>
 						<% end %>
 					</div>
