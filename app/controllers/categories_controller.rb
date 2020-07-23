@@ -7,6 +7,10 @@ class CategoriesController < ApplicationController
     # @article = Article.find(params[:id])
   end
 
+  def show
+    @articles = Article.where(category_id: params[:id].to_i)
+  end
+
   def create
     @category = Category.new(category_params)
     if @category.save
