@@ -71,8 +71,20 @@
 	font-size: 5px;
 }
 
+.card-header a {
+	color: black;
+}
+
+.card-header a:hover {
+	text-decoration: none;
+}
+
 .comment-user-profile-image img {
 	border-radius: 50%;
+}
+
+.fa.fa-trash:before {
+	color: tomato;
 }
 
 /*===================
