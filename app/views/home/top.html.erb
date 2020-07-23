@@ -9,8 +9,20 @@
 		これからあなたは週末が待ち遠しくなる
 		<p>dokoiku▶︎はおでかけプランをシェアするサイトです</p>
 	</h2>
-</div>
 
+	<div class="top-plan-seach">
+		<%= search_form_for @q do |f| %>
+
+		<div class="input-group">
+			<%= f.search_field :title_cont, class: "form-control", placeholder: "プランタイトル" %>
+			<span class="input-group-btn">
+				<%= button_tag "検索", :name => nil, class: "btn btn-primary" %>
+			</span>
+		</div>
+
+		<% end %>
+	</div>
+</div>
 
 
 <div class="container mt-5">
