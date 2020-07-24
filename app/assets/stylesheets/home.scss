@@ -7,39 +7,44 @@
 ===================*/
 
 .slider1 {
-  height: 380px;
-  width: 100%;
-  filter: brightness(50%);
+    height: 380px;
+    width: 100%;
+    filter: brightness(50%);
 
   .top-search-bg {
-  height: 350px;
+    height: 350px;
   }
 }
 
 .relative {
-  position: relative;
+    position: relative;
 
   h2 {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  font-weight: bold;
-  color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-weight: bold;
+    color: white;
 
   p {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  font-weight: bold;
-  color: white;
-  font-size: 20px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
   }
   }
 
   .top-plan-seach {
-  position: absolute;
-  top: 55%;
-  left: 37%;
+    position: absolute;
+    top: 60%;
+    left: 29%;
+    width: 610px;
+  }
+
+  button.btn.btn-primary {
+    border-radius: 0 5px 5px 0;
   }
 }
 
@@ -75,6 +80,7 @@ input#q_title_cont.form-control {
   border-radius: 8px;
 	filter: brightness(50%);
   margin-right: 30px;
+  width: 100%;
 }
 
 .category-title p {
