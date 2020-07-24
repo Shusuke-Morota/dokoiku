@@ -8,6 +8,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
+    @categories = Category.all
+    @user = User.all
     @articles = Article.where(category_id: params[:id].to_i)
   end
 
