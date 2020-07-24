@@ -4,10 +4,15 @@
 			<h2 class="page-title">ユーザー一覧</h2>
 			<%= search_form_for @search do |f| %>
 			<div class="form-group">
-				<%= f.text_field :name_cont, class: "form-control", placeholder: "ユーザー名" %>
+				<div class="user-index-search">
+					<%= f.text_field :name_cont, class: "form-control", placeholder: "ユーザー名" %>
+				</div>
+
+				<div class="user-index-search-btn">
+					<%= f.button :type => "submit", style: 'border-style: none;', class: "btn btn-primary" do %>
+					<i class='fa fa-search'></i>
+				</div>
 			</div>
-			<%= f.button :type => "submit", style: 'border-style: none;' do %>
-			<i class='fa fa-search'></i>
 			<% end %>
 			<% end %>
 		</div>
