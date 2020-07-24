@@ -33,6 +33,25 @@
     users/index
 ===================*/
 
+.user-index-search {
+	width: 215px;
+}
+
+input#q_name_cont.form-control {
+	border-radius: 5px 0 0 5px;
+}
+
+.user-index-search-btn {
+    position: absolute;
+    top: 161px;
+    left: 380px;
+}
+
+button.btn.btn-primary {
+    font-size: 17px;
+	border-radius: 0 5px 5px 0;
+}
+
 .page-title {
 	font-weight: bold;
 }
