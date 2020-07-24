@@ -1,10 +1,15 @@
-<% if @articles.length == 0 %>
-<p>お探しのページは見つかりません</p>
-<% end %>
+
+
 
 <section class="section">
 	<div class="container mt-5">
-		<h2 class="header">【 <%= @category.name %> 】カテゴリーのプラン</h2>
+
+		<% if @articles.length == 0 %>
+		  <h2 class="header">お探しのページは見つかりませんでした。</h2>
+		<% else %>
+		  <h2 class="header">【 <%= @category.name %> 】カテゴリーのプラン</h2>
+		<% end %>
+
 		<div class="row">
 			<% @articles.each do |article| %>
 			<div class="col-3">
