@@ -1,11 +1,11 @@
-<% @article.comments.each do |comment| %>
+<% @comments.each do |comment| %>
 
 <div class="card">
 	<h5 class="card-header">
 		<div class="comment-user-profile-image" style="border-radius: 50%;">
-			<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no-image.png", class:"img-fluid" %>
+			<%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no-image.png", size: "50x50", class:"img-fluid" %>
 			<%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %>
-			<time datetime="<%= @article.created_at %>" style="font-size: 13px;  margin-left: 222px">
+			<time datetime="<%= comment.created_at %>" style="font-size: 13px;  margin-left: 222px">
 				<%= time_ago_in_words(comment.created_at) %>前
 			</time>
 		</div>

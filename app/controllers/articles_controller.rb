@@ -9,8 +9,9 @@ class ArticlesController < ApplicationController
 
   def show
   	@article = Article.find(params[:id])
-    @articles = Article.order(created_at: :desc).page(params[:page])
+    @articles = Article.all
     @comment = Comment.new
+    @comments = Comment.where(article_id: params[:id]).order(created_at: :desc).page(params[:page])
   end
 
   def new
