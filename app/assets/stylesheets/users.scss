@@ -48,6 +48,8 @@ input#q_name_cont.form-control {
 }
 
 button.btn.btn-primary {
+    background-color: tomato;
+    border: solid 1px tomato;
     font-size: 17px;
 	border-radius: 0 5px 5px 0;
 }
@@ -79,6 +81,25 @@ button.btn.btn-primary {
 
 .article-show a:hover {
 	text-decoration: none;
+}
+
+a.btn.btn-warning {
+	background-color: tomato;
+	border: solid 1px tomato;
+	font-weight: bold;
+	color: white;
+}
+
+
+/*===================
+     users/edit
+===================*/
+
+input.btn.btn-success.btn-block {
+	background-color: tomato;
+	border: solid 1px tomato;
+	font-weight: bold;
+	margin-bottom: 30px;
 }
 
 
