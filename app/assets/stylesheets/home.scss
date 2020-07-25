@@ -44,7 +44,10 @@
   }
 
   button.btn.btn-primary {
+    background-color: tomato;
+    border: solid 1px tomato;
     border-radius: 0 5px 5px 0;
+    font-weight: bold;
   }
 }
 
@@ -73,7 +76,6 @@ input#q_title_cont.form-control {
 .category-title {
   border-radius: 10px;
 	position: relative;    /*相対配置*/
-  border: solid 2px tomato;
 }
 
 .category-title img {
@@ -130,7 +132,7 @@ input#q_title_cont.form-control {
 }
 
 .card-plan-image img {
-  border: solid 2px tomato;
+  border: solid 2px lightgray;
   border-radius: 8px;
 }
 
