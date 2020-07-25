@@ -18,6 +18,11 @@
 @import "slick-theme";
 @import "slick";
 
+div.alert.alert-primary {
+	margin-bottom: 0;
+	text-align: center;
+}
+
 h2 {
     text-align: center;
 }
