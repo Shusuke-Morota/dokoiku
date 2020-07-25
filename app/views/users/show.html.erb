@@ -21,10 +21,11 @@
 						<% end %>
 
 						<p class="card-text" style="border-bottom: solid 1px #E8E8E8;"><%= @user.profile %></p>
-
-						<% if @user.id == current_user.id %>
-						<%= link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-warning" %>
-						<% end %>
+						<div class="user-show-btn">
+							<% if @user.id == current_user.id %>
+							<%= link_to "ユーザー情報を編集する", edit_user_path, class: "btn btn-warning" %>
+							<% end %>
+						</div>
 					</div>
 				</div>
 			</div>

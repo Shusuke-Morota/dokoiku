@@ -84,7 +84,20 @@
 }
 
 .fa.fa-trash:before {
-	color: tomato;
+	color: red;
+}
+
+input.btn.btn-info.btn-block {
+	background-color: tomato;
+    border: solid 1px tomato;
+    font-weight: bold;
+}
+
+a#view_more.btn.btn-primary {
+    background-color: tomato;
+    border: solid 1px tomato;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 /*===================
