@@ -12,74 +12,77 @@
   <script src="https://kit.fontawesome.com/3a4e43d077.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body id="<%= controller.controller_name %>-<%= controller.action_name %>">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <%= link_to image_tag('dokoiku-logo.png'), root_path, class: "navbar-brand" %>
-    <button type="button" class="navbar-toggler" data-toggler="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to image_tag('dokoiku-logo.png'), root_path, class: "navbar-brand" %>
+      <button type="button" class="navbar-toggler" data-toggler="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <% if user_signed_in? %>
-    <div class="collapse navbar-collapse" id="Navbar">
-    </div>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "マイページ", user_path(current_user), class: "nav-link" %>
-      </li>
+      <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="Navbar">
+      </div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "マイページ", user_path(current_user), class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "カテゴリー一覧", categories_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "カテゴリー一覧", categories_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "新規投稿", new_article_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "新規投稿", new_article_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "プラン一覧", articles_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "プラン一覧", articles_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      </li>
-    </ul>
-    <% else %>
-    <div class="collapse navbar-collapse" id="Navbar">
-    </div>
-    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      </ul>
+      <% else %>
+      <div class="collapse navbar-collapse" id="Navbar">
+      </div>
+      <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
-      </li>
+        <li class="nav-item">
+          <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+        </li>
 
-      <li class="nav-item">
-        <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
-      </li>
-    </ul>
+        <li class="nav-item">
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <% end %>
+    </nav>
+
+
+    <% if flash[:notice] %>
+    <div class="alert alert-primary"><strong><%= notice %></strong></div>
     <% end %>
-  </nav>
 
+    <% if flash[:alert] %>
+    <div class="alert alert-danger"><strong><%= alert %></strong></div>
+    <% end %>
 
-  <% if flash[:notice] %>
-  <div class="alert alert-primary"><strong><%= notice %></strong></div>
-  <% end %>
+    <%= yield %>
 
-  <% if flash[:alert] %>
-  <div class="alert alert-danger"><strong><%= alert %></strong></div>
-  <% end %>
-
-  <%= yield %>
-
-  <footer class="navbar navbar-fixed-bottom", style="background-color: tomato; height: 90px;">
-  </footer>
+    <footer class="footer-navbar">
+    </footer>
+  </div>
 
 </body>
 </html>
