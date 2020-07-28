@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   	#@articles = Article.all.page(params[:page]).per(10)
     query = { title_cont: params[:q] }
     @q = Article.ransack(query)
-    @articles = @q.result.page(params[:page]).per(10)
+    @articles = @q.result.page(params[:page]).per(7)
   end
 
   def show
