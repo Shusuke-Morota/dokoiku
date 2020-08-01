@@ -136,13 +136,20 @@ input#q_title_cont.form-control {
   border-radius: 8px;
 }
 
+.new-articles-title {
+  height: 72px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 88%;
+  border-radius: 0 0 5px 5px;
+}
+
 .relative {
   position: relative;
 
   p {
     position: absolute;
     top: 230px;
-    left: 16px;
+    left: 2px;
     font-weight: bold;
     color: white;
     font-size: 20px;
