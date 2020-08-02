@@ -25,8 +25,21 @@
       <div class="collapse navbar-collapse" id="Navbar">
       </div>
       <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <%= link_to "dokoikuとは", home_about_path, class: "nav-link" %>
+        </li>
+
         <li class="nav-item">
           <%= link_to "マイページ", user_path(current_user), class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "プラン投稿", new_article_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "プラン一覧", articles_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
@@ -38,14 +51,6 @@
         </li>
 
         <li class="nav-item">
-          <%= link_to "新規投稿", new_article_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "プラン一覧", articles_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       </ul>
@@ -53,6 +58,10 @@
       <div class="collapse navbar-collapse" id="Navbar">
       </div>
       <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <%= link_to "dokoikuとは", home_about_path, class: "nav-link" %>
+        </li>
 
         <li class="nav-item">
           <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
@@ -83,10 +92,6 @@
     <footer class="footer-navbar" style="color: white;">
 
         © All rights reserved by dokoiku.
-
-      <p class="footer-about">
-        <%= link_to "dokoiku▶︎とは", home_about_path %>
-      </p>
 
     </footer>
   </div>
