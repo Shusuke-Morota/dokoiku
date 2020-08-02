@@ -208,6 +208,31 @@ ul.pagination {
      top / about
 ===================*/
 
+.about-header {
+  position: relative;
+}
+
+.about-header p {
+  color: tomato;
+  font-weight: bold;
+  font-size: 2em;
+  position: absolute;
+  top: 34%;
+  left: 18%;
+}
+
+p.about-text-1 {
+  top: 40%;
+}
+
+p.about-text-2 {
+  top:46%;
+}
+
+img.about_image {
+  width: 100%;
+  opacity: 0.1;
+}
 
 
 
