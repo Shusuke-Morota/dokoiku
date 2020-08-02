@@ -213,20 +213,35 @@ ul.pagination {
 }
 
 .about-header p {
+  border-bottom: solid 2px lightgray;
   color: tomato;
   font-weight: bold;
   font-size: 2em;
   position: absolute;
-  top: 34%;
+  top: 10%;
   left: 18%;
 }
 
 p.about-text-1 {
-  top: 40%;
+  top: 25%;
+  left: 256px;
 }
 
 p.about-text-2 {
-  top:46%;
+  top: 39%;
+  left: 259px;
+}
+
+p.about-text-3 {
+  top: 53%;
+}
+
+p.about-text-4 {
+  top: 67%;
+}
+
+p.about-text-5 {
+  top: 81%;
 }
 
 img.about_image {
