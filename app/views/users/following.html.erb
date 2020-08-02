@@ -14,12 +14,12 @@
 					<tr>
 						<td class="following-user-profile-image">
 							<%= link_to user_path(following) do %>
-							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
+							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid mx-auto" %>
 							<% end %>
 						</td>
 						<td class="following-user-name">
 							<%= link_to user_path(following) do %>
-							<strong><%= following.name %></strong>
+							<%= following.name %>
 							<% end %>
 						</td>
 					</tr>

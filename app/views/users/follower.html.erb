@@ -15,7 +15,7 @@
 					<tr>
 						<td class="follower-user-profile-image">
 							<%= link_to user_path(follower) do %>
-							<%= attachment_image_tag follower, :profile_image, :fill, 75, 75, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
+							<%= attachment_image_tag follower, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid mx-auto" %>
 							<% end %>
 						</td>
 						<td class="follower-user-name">
