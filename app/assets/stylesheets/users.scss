@@ -107,8 +107,14 @@ input.btn.btn-success.btn-block {
    users/following
 ===================*/
 
+.following-user-name {
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .following-user-name a {
 	color: black;
+	margin-left: 30px;
 	justify-content: center;
 }
 
@@ -120,8 +126,14 @@ input.btn.btn-success.btn-block {
    users/follower
 ===================*/
 
+.follower-user-name {
+	font-weight: bold;
+	font-size: 20px;
+}
+
 .follower-user-name a {
 	color: black;
+	margin-left: 30px;
 }
 
 .follower-user-name a:hover {
