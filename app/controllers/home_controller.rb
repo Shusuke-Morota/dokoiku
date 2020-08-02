@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   	@q = Article.ransack(params[:q])
     @articles = @q.result.page(params[:page]).per(10).order(id: "DESC").all.page(params[:page]).per(5)
   end
+
+  def about
+  end
 end

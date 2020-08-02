@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # get 'categories/index'
   # get 'categories/edit'
 	root to: 'home#top'
+	get 'home/about'
 	devise_for :users
 
 	resources :users
