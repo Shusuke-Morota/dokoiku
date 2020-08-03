@@ -39,20 +39,25 @@
   .top-plan-seach {
     position: absolute;
     top: 60%;
-    left: 29%;
-    width: 610px;
+    left: 27%;
+    width: 660px;
   }
 
   button.btn.btn-primary {
     background-color: tomato;
     border: solid 1px tomato;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 45px 45px 0;
     font-weight: bold;
+    font-size: 16px;
   }
 }
 
 input#q_title_cont.form-control {
   width: 300px;
+}
+
+input#q.form-control {
+  border-radius: 45px 0 0 45px;
 }
 
 
