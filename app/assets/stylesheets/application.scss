@@ -70,6 +70,29 @@ footer {
     bottom: 0;
 }
 
+/*===================
+  page_top / button
+===================*/
+
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+#page_top a {
+    background-color: #999;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+#page_top a:hover {
+    background-color: #666;
+    text-decoration: none;
+}
+
+
 
 
 
