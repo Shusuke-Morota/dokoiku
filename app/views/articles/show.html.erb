@@ -26,16 +26,20 @@
 						<%= render partial: "favorites/favorite", locals: { article: @article } %>
 					</span>
 
-					<% if @article.user == current_user %> <!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
+					<% if @article.user == current_user %>
+					<!-- 記事を投稿した人とログインしている人が同じならば編集と削除を表示させる -->
 					<div class="article-button" style="text-align: right;">
 						<%= link_to "編集", edit_article_path(@article), class: "btn btn-success" %>
 						<%= link_to "削除", article_path(@article), method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか？"} %>
 					</div>
 					<% end %>
 
+					<% if @article.user != current_user %>
+					<!-- ログインしているユーザーは自分のプランの詳細画面に"このプランの投稿者を見る"を表示させない -->
 					<div class="article-planer">
 						<%= link_to "このプランの投稿者を見る", user_path(@article.user.id) %>
 					</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
