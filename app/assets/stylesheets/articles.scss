@@ -114,6 +114,15 @@ button.slick-next.slick-arrow::before {
   content: "";
 }
 
+.article-planer a {
+  color: tomato;
+  font-weight: bold;
+}
+
+.article-planer a:hover {
+  text-decoration: none;
+}
+
 a.btn.btn-success {
   border-radius: 45px;
 }

@@ -5,8 +5,21 @@
 		<div class="col-6">
 			<div class="card" style="box-shadow: 0 0 8px lightgray;">
 				<div class="card-body">
-					<h5 class="card-title"><%= @article.title %></h5>
-					<p class="card-text"><%= simple_format @article.body %></p> <!-- simple_formatで改行が反映される -->
+					<h5 class="card-title">
+						<%= @article.title %>
+					</h5>
+
+					<p class="card-text">
+						<%= simple_format @article.body %><!-- simple_formatで改行が反映される -->
+					</p>
+
+					<% if @article.user != current_user %>
+					<!-- ログインしているユーザーは自分のプランの詳細画面に"このプランの投稿者を見る"を表示させない -->
+					<div class="article-planer">
+						<%= link_to "このプランの投稿者を見る", user_path(@article.user.id) %>
+					</div>
+					<% end %>
+
 					<p class="card-text">
 						<div class="slider-area2">
 							<div class="slider2">
@@ -18,8 +31,11 @@
 							</div>
 						</div>
 					</p>
+
 					<p class="card-text">
-						<small class="text-muted">投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %></small>
+						<small class="text-muted">
+							投稿日：<%= @article.created_at.strftime("%Y-%m-%d") %>
+						</small>
 					</p>
 
 					<span id='favorites_buttons_<%= @article.id %>'>
@@ -34,17 +50,11 @@
 					</div>
 					<% end %>
 
-					<% if @article.user != current_user %>
-					<!-- ログインしているユーザーは自分のプランの詳細画面に"このプランの投稿者を見る"を表示させない -->
-					<div class="article-planer">
-						<%= link_to "このプランの投稿者を見る", user_path(@article.user.id) %>
-					</div>
-					<% end %>
 				</div>
 			</div>
 		</div>
 
-		<!---------------以下コメント機能-------------------->
+		<!---------------コメント機能-------------------->
 
 		<div class="col-6">
 			<div class="comment-form">
@@ -74,5 +84,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!---------------コメント機能-------------------->
+
 	</div>
 </div>
