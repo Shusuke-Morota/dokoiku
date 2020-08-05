@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @search = User.search(params[:q])
-    @users = @search.result
+    @users = @search.result.all.page(params[:page]).per(8)
   end
 
   def show
     @user = User.find(params[:id])
-    @articles = Article.all.page(params[:page]).per(5)
+    @articles = Article.all
   end
 
   def edit
