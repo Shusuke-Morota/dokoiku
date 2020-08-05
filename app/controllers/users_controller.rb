@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @articles = Article.all
+    @articles = Article.all.page(params[:page]).per(5)
   end
 
   def edit
