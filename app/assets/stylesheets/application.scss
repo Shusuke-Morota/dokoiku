@@ -92,6 +92,31 @@ footer {
     text-decoration: none;
 }
 
+/*===================
+   all_paginations
+===================*/
+
+.pagination > li > a {
+  border: none;
+  border-radius: 50px;
+  color: black;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination > .active>a {
+  border-radius: 50px;
+}
+
+.page-item.active .page-link {
+    background-color: tomato;
+    border-radius: 50px;
+}
+
+/*ホバー時のデザイン*/
+.pagination > li > a:hover {
+  border-radius: 50px;    /*角を丸くする*/
+}
+
 
 
 
