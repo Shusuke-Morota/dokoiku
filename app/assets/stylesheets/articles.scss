@@ -32,32 +32,6 @@
 	text-decoration: none;
 }
 
-/*===================
- articles/pagination
-===================*/
-
-.pagination>li>a {
-  border: none;                     /*枠線をなくす*/
-  color: black;                   /*文字の色を変える*/
-}
-
-/* 表示しているページ番号のデザイン */
-.pagination>.active>a {
-  background-color: tomato;                /*背景の色を変える*/
-  border-radius: 50%;              /*角を丸くする*/
-}
-
-.page-item.active .page-link {
-  background-color: tomato;
-}
-
-/*ホバー時のデザイン*/
-.pagination>li>a:hover {
-  border-radius: 15px;              /*角を丸くする*/
-}
-
-
-
 
 /*===================
     articles/show
