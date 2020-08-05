@@ -73,7 +73,7 @@
 						<%= attachment_image_tag article.article_images.first, :image, :fill, 350, 300, format: 'jpeg', class:"img-fluid mx-auto"  %>
 						<% end %>
 						<% end %>
-						<p class="new-articles-title"><%= article.title %></p>
+						<p class="new-articles-title"><%= truncate(article.title, length: 10) %></p>
 						<p class="new-articles-body"><%= truncate(article.body, length: 15) %></p>
 					</div>
 				</div>
