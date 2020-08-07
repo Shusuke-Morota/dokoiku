@@ -19,4 +19,10 @@ Rails.application.routes.draw do
 	get 'users/following/:user_id', to: 'users#following', as:'users_following'
 	get 'users/follower/:user_id', to: 'users#follower', as:'users_follower'
 
+	devise_for :admins
+
+	namespace :admins do
+		resources :categories
+	end
+
 end
