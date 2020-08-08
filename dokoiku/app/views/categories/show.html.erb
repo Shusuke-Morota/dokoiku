@@ -1,0 +1,40 @@
+
+
+
+<section class="section">
+	<div class="container mt-5">
+
+		<% if @articles.length == 0 %>
+		  <h2 class="category-header">お探しのページは見つかりませんでした。</h2>
+		<% else %>
+		  <h2 class="category-header">【 <%= @category.name %> 】カテゴリーのプラン</h2>
+		<% end %>
+
+		<div class="row">
+			<% @articles.each do |article| %>
+			<div class="col-3">
+				<div class="card" style="box-shadow: 0 0 8px gray;">
+					<div class="category-card-content">
+						<div class="card-image">
+							<div class="category-show-image">
+								<% if article.article_images.present? %>
+								<%= link_to article_path(article) do %>
+								<%= attachment_image_tag article.article_images.first, :image, :fill, 350, 400, format: 'jpeg', class:"img-fluid mx-auto"  %>
+								<% end %>
+								<% end %>
+								<div class="category-show-title">
+									タイトル：<%= truncate(article.title, length: 10) %>
+								</div>
+								<div class="category-show-body">
+									本文：<%= truncate(article.body, length: 10) %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>
+

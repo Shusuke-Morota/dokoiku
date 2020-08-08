@@ -1,0 +1,37 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*===================
+category / show
+===================*/
+
+.header {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.category-show-title {
+    border-bottom: solid 1px lightgray;
+    font-weight: bold;
+    text-align: center;
+}
+
+.category-show-body {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*===================
+category / show
+===================*/
+
+input.btn.btn-primary.btn-block {
+    background-color: tomato;
+    border: solid 1px tomato;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

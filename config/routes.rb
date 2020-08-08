@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
 	namespace :admins do
 		resources :categories
+		resources :areas
 	end
 
 end

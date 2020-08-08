@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dokoiku</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://kit.fontawesome.com/3a4e43d077.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body id="<%= controller.controller_name %>-<%= controller.action_name %>">
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to image_tag('dokoiku-logo.png'), root_path, class: "navbar-brand" %>
+      <button type="button" class="navbar-toggler" data-toggler="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <% if user_signed_in? %>
+      <div class="collapse navbar-collapse" id="Navbar">
+      </div>
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <%= link_to "dokoikuとは", home_about_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "マイページ", user_path(current_user), class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "プラン投稿", new_article_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "プラン一覧", articles_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "カテゴリー一覧", categories_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      </ul>
+      <% else %>
+      <div class="collapse navbar-collapse" id="Navbar">
+      </div>
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <%= link_to "dokoikuとは", home_about_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "ユーザー一覧", users_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <% end %>
+    </nav>
+
+
+    <% if flash[:notice] %>
+    <div class="alert alert-primary"><strong><%= notice %></strong></div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="alert alert-danger"><strong><%= alert %></strong></div>
+    <% end %>
+
+    <%= yield %>
+
+    <footer class="footer-navbar" style="color: white;">
+
+      © All rights reserved by dokoiku.
+
+    </footer>
+  </div>
+
+</body>
+<div id="page_top"><a href="#">⇧</a>
+  </html>

@@ -1,0 +1,44 @@
+<div class="container mt-5">
+	<div class="row" style="margin-left: 200px">
+		<div class="col-xs-6">
+			<%= form_with model: @category, local: true do |f| %>
+
+			<%= f.text_field :name, class:'form-control', placeholder: "カテゴリーを追加しよう" %><br>
+
+			<%= f.submit '追加する', class: 'btn btn-primary btn-block' %>
+			<% end %>
+		</div>
+		<div class="col-xs-6">
+			<h2 style="font-weight: bold; margin-left: 200px;">カテゴリー一覧</h2>
+			<table class="table" style="margin-left: 120px">
+				<thead>
+					<tr>
+						<th></th>
+						<th style="text-align: center;">カテゴリー名</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @categories.each do |category| %>
+					<tr>
+						<td>
+							<%= attachment_image_tag category, :category_image, :fill, 50, 50, format: "png" %>
+						</td>
+						<td style="text-align: center; line-height: 50px;">
+							<%= category.name %>
+						</td>
+						<td style="line-height: 50px;">
+							<%= link_to '編集',  edit_admins_category_path(category), class: 'btn-sm btn-primary' %>
+						</td>
+						<td style="line-height: 50px;">
+							<%= link_to '削除', admins_category_path(category), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn-sm btn-danger' %>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

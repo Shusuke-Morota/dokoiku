@@ -1,0 +1,32 @@
+
+
+
+<div class="container mt-5">
+	<div class="row">
+		<h3 class="header">
+			<i class="far fa-user"></i><%= @user.name %>さんのフォロワー
+		</h3>
+	</div>
+	<div class="row mt-5" style="margin-left: 150px;">
+		<% @followers.each do |follower| %>
+		<div class="col-3" style="border-bottom: solid 1px #E8E8E8; margin: 0 20px 20px 0;">
+			<table>
+				<tbody>
+					<tr>
+						<td class="follower-user-profile-image">
+							<%= link_to user_path(follower) do %>
+							<%= attachment_image_tag follower, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid mx-auto" %>
+							<% end %>
+						</td>
+						<td class="follower-user-name">
+							<%= link_to user_path(follower) do %>
+							<%= follower.name %>
+							<% end %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<% end %>
+	</div>
+</div>
