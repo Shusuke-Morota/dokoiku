@@ -1,0 +1,63 @@
+<section class="title">
+	<div class="body">
+		<div class="container mt-3">
+			<h2 class="page-title">ユーザー一覧</h2>
+			<%= search_form_for @search do |f| %>
+			<div class="form-group">
+				<div class="user-index-search">
+					<%= f.text_field :name_cont, class: "form-control", placeholder: "ユーザー名" %>
+				</div>
+
+				<div class="user-index-search-btn">
+					<%= button_tag "検索", class: "btn btn-primary" %>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<% @users.each do |user| %>
+			<div class="col-3">
+				<div class="card" style="box-shadow: 0 0 8px lightgray;">
+					<div class="card-content">
+						<div class="card-image">
+							<figure class="image" style="margin: 5px;">
+								<%= link_to user_path(user) do %>
+								<%= attachment_image_tag user, :profile_image, :fill, 260, 260, fallback: "no-image.png", class:"img-fluid" %>
+								<% end %>
+							</figure>
+						</div>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content">
+								<div class="index-username">
+									<%= link_to user.name, user_path(user) %>
+								</div>
+							</div>
+						</div>
+						<div class="article-count">
+							プラン投稿：<%= user.articles.count %> 件
+						</div>
+						<!-----------フォロー機能------------>
+						<div class="favorites" style="margin-bottom: 10px;">
+							<% unless user == current_user %>
+							<span id="follow-button_#{ user.id }"></span>
+							<%= render 'users/follow-button', user: user %>
+							<% end %>
+						</div>
+						<!-----------フォロー機能------------>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+		<div class="users-index-paginate" style="justify-content: center;">
+			<%= paginate @users %>
+		</div>
+	</div>
+</section>
