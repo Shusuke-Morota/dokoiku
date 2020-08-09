@@ -17,10 +17,10 @@ class Admins::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path
+      redirect_to admins_categories_path, notice: "カテゴリーの追加に成功しました。"
     else
       @categories = Category.all
-      render 'index'
+      render 'index', notice: "カテゴリーの追加に成功しました。"
     end
   end
 
@@ -29,7 +29,7 @@ class Admins::CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path
+      redirect_to admins_categories_path
     else
       render 'edit'
     end
@@ -37,7 +37,7 @@ class Admins::CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-    redirect_to categories_path
+    redirect_to admins_categories_path, alert: "カテゴリーの削除に成功しました。"
   end
 
   private
