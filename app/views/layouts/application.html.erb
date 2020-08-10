@@ -55,42 +55,6 @@
         </li>
       </ul>
 
-      <% elsif admin_signed_in? %>
-      <div class="collapse navbar-collapse" id="Navbar">
-      </div>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "エリア追加", new_admins_area_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "カテゴリー一覧", admins_categories_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      </ul>
-
-      <% elsif %>
-
-      <div class="collapse navbar-collapse" id="Navbar">
-      </div>
-
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "dokoikuとは", home_about_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "カテゴリー一覧", admins_categories_path, class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      </ul>
-
       <% else %>
 
       <div class="collapse navbar-collapse" id="Navbar">
