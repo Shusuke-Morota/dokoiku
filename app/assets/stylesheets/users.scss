@@ -70,29 +70,32 @@ button.btn.btn-primary {
      users/show
 ===================*/
 
-.article-show {
-	font-weight: bold;
-	margin-left: 30px;
-}
+#users-show {
 
-.article-show a {
-	color: black;
-}
+	.article-show {
+	     font-weight: bold;
+	     margin-left: 30px;
+    }
 
-.article-show a:hover {
-	text-decoration: none;
-}
+    .article-show a {
+	     color: black;
+    }
 
-a.btn.btn-warning {
-	background-color: tomato;
-	border: solid 1px tomato;
-	border-radius: 45px;
-	font-weight: bold;
-	color: white;
-}
+    .article-show a:hover {
+	     text-decoration: none;
+    }
 
-img.attachment.article_image.image.img-fluid {
-	border-radius: 5px;
+    a.btn.btn-warning {
+		background-color: tomato;
+		border: solid 1px tomato;
+		border-radius: 45px;
+		font-weight: bold;
+		color: white;
+    }
+
+    img.attachment.article_image.image.img-fluid {
+	    border-radius: 5px;
+    }
 }
 
 
