@@ -72,17 +72,35 @@ button.btn.btn-primary {
 
 #users-show {
 
+    h2.page-title {
+        margin-bottom: 30px;
+    }
+
+    div.card {
+        border: solid 3px tomato;
+        border-radius: 3px;
+    }
+
+    div.card-body {
+        text-align: center;
+    }
+
+    img.attachment.user.profile_image.img-fluid.mx-auto {
+        border: solid 3px tomato;
+        border-radius: 5px;
+    }
+
 	.article-show {
-	     font-weight: bold;
-	     margin-left: 30px;
+	    font-weight: bold;
+	    margin-left: 30px;
     }
 
     .article-show a {
-	     color: black;
+	    color: black;
     }
 
     .article-show a:hover {
-	     text-decoration: none;
+	    text-decoration: none;
     }
 
     a.btn.btn-warning {
