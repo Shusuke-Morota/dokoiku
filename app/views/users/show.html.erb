@@ -1,12 +1,12 @@
 
 
 <div class="container mt-5">
-	<div class="row" style="text-align: center;">
+	<div class="row">
 		<div class="col-4">
 			<h2 class="page-title">マイページ</h2>
-			<div class="card" style="box-shadow: 0 0 8px lightgray;">
+			<div class="card">
 				<div class="card-body">
-					<%= attachment_image_tag @user, :profile_image, :fill, 250, 250, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
+					<%= attachment_image_tag @user, :profile_image, :fill, 300, 250, fallback: "no-image.png", format:'png', class:"img-fluid mx-auto" %>
 				</div>
 				<div class="content">
 					<div class="card-body">
