@@ -74,6 +74,7 @@ button.btn.btn-primary {
 
     h2.page-title {
         margin-bottom: 30px;
+        color: #00214d;
     }
 
     div.card {
@@ -101,6 +102,10 @@ button.btn.btn-primary {
         margin-bottom: 10px;
     }
 
+    p.card-text {
+        border-bottom: dashed 3px #00214d;
+    }
+
 	.article-show {
 	    font-weight: bold;
 	    margin-left: 30px;
@@ -116,10 +121,15 @@ button.btn.btn-primary {
 
     a.btn.btn-warning {
 		background-color: tomato;
-		border: solid 1px tomato;
+		border: solid 3px #00214d;
 		border-radius: 45px;
 		font-weight: bold;
 		color: white;
+		transition: .3s;
+    }
+
+    a.btn.btn-warning:hover {
+        transform: translateY(-4px);
     }
 
     img.attachment.article_image.image.img-fluid {
