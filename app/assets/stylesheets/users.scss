@@ -33,37 +33,41 @@
     users/index
 ===================*/
 
-.user-index-search {
-	width: 198px;
-}
+#users-index {
 
-input#q_name_cont.form-control {
-	border-radius: 45px 0 0 45px;
-}
+	.user-index-search {
+	    width: 198px;
+    }
 
-.user-index-search-btn {
-    position: absolute;
-    top: 161px;
-    left: 362px;
-}
+    input#q_name_cont.form-control {
+        border: solid 4px #00214d;
+	    border-radius: 45px 0 0 45px;
+    }
 
-button.btn.btn-primary {
-    background-color: tomato;
-    border: solid 1px tomato;
-    font-size: 16px;
-	border-radius: 0 45px 45px 0;
-}
+    .user-index-search-btn {
+        position: absolute;
+        top: 161px;
+        left: 362px;
+    }
 
-.page-title {
-	font-weight: bold;
-}
+    button.btn.btn-primary {
+	    background-color: tomato;
+	    border: solid 4px #00214d;
+	    border-radius: 0 45px 45px 0;
+	    font-size: 12px;
+    }
 
-.index-username a {
-	color: black;
-}
+    .users-index-title {
+	    font-weight: bold;
+    }
 
-.index-username a:hover {
-	text-decoration: none;
+    .index-username a {
+	    color: black;
+    }
+
+    .index-username a:hover {
+	    text-decoration: none;
+    }
 }
 
 /*===================
