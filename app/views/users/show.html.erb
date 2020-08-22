@@ -27,9 +27,9 @@
 						</h5>
 
 						<% if @user.id == current_user.id %>
-							<p class="card-text">
-								<small class="text-muted"><%= @user.email %></small>
-							</p>
+						<p class="card-text">
+							<small class="text-muted"><%= @user.email %></small>
+						</p>
 						<% end %>
 
 						<p class="card-text">
@@ -50,7 +50,7 @@
 				<% @user.articles.each do |article| %>
 				<div class="col-4">
 					<div class="h-50 mt-5">
-						<div class="card" style="box-shadow: 0 0 8px lightgray;">
+						<div class="card">
 							<div class="card-body">
 								<% if article.article_images.present? %>
 								<%= link_to article_path(article) do %>
@@ -59,13 +59,8 @@
 								<% end %>
 							</div>
 
-							<div class="article-show">
-								<%= link_to article_path(article) do %>
-								<span class="panel-icon">
-									<i class="far fa-newspaper"></i>
-								</span>
-								このプランを見る
-								　　<% end %>
+							<div class="article-show-title">
+								<%= link_to "このプランを見る", article_path(article) %>
 							</div>
 						</div>
 					</div>

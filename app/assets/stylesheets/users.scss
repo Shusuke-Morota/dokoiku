@@ -73,7 +73,6 @@ button.btn.btn-primary {
 #users-show {
 
     h2.page-title {
-        margin-bottom: 30px;
         color: #00214d;
     }
 
@@ -106,17 +105,16 @@ button.btn.btn-primary {
         border-bottom: dashed 3px #00214d;
     }
 
-	.article-show {
+	.article-show-title {
 	    font-weight: bold;
-	    margin-left: 30px;
+	    text-align: center;
+	    border-top: dashed 3px #00214d;
+        margin-top: 20px;
+        line-height: 50px;
     }
 
-    .article-show a {
-	    color: black;
-    }
-
-    .article-show a:hover {
-	    text-decoration: none;
+    .article-show-title a {
+        color: #00214d;
     }
 
     a.btn.btn-warning {
@@ -133,6 +131,7 @@ button.btn.btn-primary {
     }
 
     img.attachment.article_image.image.img-fluid {
+        border: solid 3px #00214d;
 	    border-radius: 5px;
     }
 }
