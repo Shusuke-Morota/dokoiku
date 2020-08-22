@@ -77,7 +77,7 @@ button.btn.btn-primary {
     }
 
     div.card {
-        border: solid 3px tomato;
+        border: solid 3px #00214d;
         border-radius: 3px;
     }
 
@@ -86,8 +86,19 @@ button.btn.btn-primary {
     }
 
     img.attachment.user.profile_image.img-fluid.mx-auto {
-        border: solid 3px tomato;
+        border: solid 3px #00214d;
         border-radius: 5px;
+    }
+
+    div.users-show-user-name {
+        font-weight: bold;
+        border-bottom: dashed 3px #00214d;
+        margin-bottom: 10px;
+    }
+
+    div.users-show-follow {
+        border-bottom: dashed 3px #00214d;
+        margin-bottom: 10px;
     }
 
 	.article-show {

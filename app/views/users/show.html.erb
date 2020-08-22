@@ -10,15 +10,20 @@
 				</div>
 				<div class="content">
 					<div class="card-body">
-						<h5 class="card-title" style="border-bottom: solid 1px #E8E8E8;">
-							<%= @user.name %><br>
-							<small>
-								フォロー数：<%= link_to @user.follower.count, users_following_path(@user) %>
-							</small><br>
+						<h5 class="card-title">
+							<div class="users-show-user-name">
+								<%= @user.name %><br>
+							</div>
 
-							<small>
-								フォロワー数：<%= link_to @user.followed.count, users_follower_path(@user) %>
-							</small><br>
+							<div class="users-show-follow">
+								<small>
+									フォロー数：<%= link_to @user.follower.count, users_following_path(@user) %>
+								</small><br>
+
+								<small>
+									フォロワー数：<%= link_to @user.followed.count, users_follower_path(@user) %>
+								</small><br>
+							</div>
 						</h5>
 
 						<% if @user.id == current_user.id %>
