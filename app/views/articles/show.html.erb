@@ -3,15 +3,15 @@
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-6">
-			<div class="card" style="box-shadow: 0 0 8px lightgray;">
+			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">
 						<%= @article.title %>
 					</h5>
 
-					<p class="card-text">
+					<div class="card-text">
 						<%= simple_format @article.body %><!-- simple_formatで改行が反映される -->
-					</p>
+					</div>
 
 					<% if @article.user != current_user %>
 					<!-- ログインしているユーザーは自分のプランの詳細画面に"このプランの投稿者を見る"を表示させない -->

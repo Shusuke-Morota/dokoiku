@@ -18,14 +18,17 @@
     .index-title {
         color: #00214d;
         text-align: center;
-        border-bottom: solid 3px #00214d;
     }
 
     .index-body {
         font-weight: bold;
         line-height: 125px;
         text-align: center;
+    }
+
+    th {
         border-top: solid 3px #00214d;
+        border-bottom: solid 3px #00214d;
     }
 
     .article-title a {
@@ -44,7 +47,15 @@
         text-decoration: none;
     }
 
+    img.attachment.article_image.image {
+        border: solid 3px #00214d;
+    }
+
     i.far.fa-thumbs-up::before {
+        color: tomato;
+    }
+
+    i.fas.fa-thumbs-up::before {
         color: tomato;
     }
 }
@@ -55,73 +66,91 @@
     articles/show
 ===================*/
 
-.comment {
-	font-weight: bold;
+#articles-show {
+
+    .card {
+      border: solid 3px #00214d;
+    }
+
+    .card-title {
+      font-weight: bold;
+      border-bottom: dashed 3px #00214d;
+    }
+
+    div.card-text {
+      border-bottom: dashed 3px #00214d;
+    }
+
+    .comment {
+      font-weight: bold;
+    }
+
+    .comment-index {
+      font-weight: bold;
+    }
+
+    .datetime {
+      font-size: 5px;
+    }
+
+    .card-header a {
+      color: black;
+    }
+
+    .card-header a:hover {
+      text-decoration: none;
+    }
+
+    .comment-user-profile-image img {
+      border-radius: 50%;
+    }
+
+    .fa.fa-trash:before {
+      color: red;
+    }
+
+    input.btn.btn-info.btn-block {
+      background-color: tomato;
+      border: solid 1px tomato;
+      border-radius: 45px;
+      font-weight: bold;
+    }
+
+    a#view_more.btn.btn-primary {
+      background-color: tomato;
+      border: solid 1px tomato;
+      border-radius: 45px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    button.slick-prev.slick-arrow::before {
+      content: "";
+    }
+
+    button.slick-next.slick-arrow::before {
+      content: "";
+    }
+
+    .article-planer a {
+      color: tomato;
+      font-weight: bold;
+    }
+
+    .article-planer a:hover {
+      text-decoration: none;
+    }
+
+    a.btn.btn-success {
+      border-radius: 45px;
+    }
+
+    a.btn.btn-danger {
+      border-radius: 45px;
+    }
+
 }
 
-.comment-index {
-	font-weight: bold;
-}
-
-.datetime {
-	font-size: 5px;
-}
-
-.card-header a {
-	color: black;
-}
-
-.card-header a:hover {
-	text-decoration: none;
-}
-
-.comment-user-profile-image img {
-	border-radius: 50%;
-}
-
-.fa.fa-trash:before {
-	color: red;
-}
-
-input.btn.btn-info.btn-block {
-	background-color: tomato;
-    border: solid 1px tomato;
-    border-radius: 45px;
-    font-weight: bold;
-}
-
-a#view_more.btn.btn-primary {
-    background-color: tomato;
-    border: solid 1px tomato;
-    border-radius: 45px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-button.slick-prev.slick-arrow::before {
-  content: "";
-}
-
-button.slick-next.slick-arrow::before {
-  content: "";
-}
-
-.article-planer a {
-  color: tomato;
-  font-weight: bold;
-}
-
-.article-planer a:hover {
-  text-decoration: none;
-}
-
-a.btn.btn-success {
-  border-radius: 45px;
-}
-
-a.btn.btn-danger {
-  border-radius: 45px;
-}
 
 /*===================
  articles/show/slick
