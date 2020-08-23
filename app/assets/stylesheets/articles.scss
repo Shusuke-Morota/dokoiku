@@ -43,6 +43,10 @@
     .article-username a:hover {
         text-decoration: none;
     }
+
+    i.far.fa-thumbs-up::before {
+        color: tomato;
+    }
 }
 
 
