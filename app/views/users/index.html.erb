@@ -25,7 +25,7 @@
 		<div class="row">
 			<% @users.each do |user| %>
 			<div class="col-3">
-				<div class="card" style="box-shadow: 0 0 8px lightgray;">
+				<div class="card">
 					<div class="card-content">
 						<div class="card-image">
 							<figure class="image" style="margin: 5px;">
@@ -36,15 +36,15 @@
 						</div>
 					</div>
 					<div class="card-content">
-						<div class="media">
+						<div class="card-body">
 							<div class="media-content">
-								<div class="index-username">
+								<div class="index-user-name">
 									<%= link_to user.name, user_path(user) %>
 								</div>
 							</div>
-						</div>
-						<div class="article-count">
-							プラン投稿：<%= user.articles.count %> 件
+							<div class="users-index-article-count">
+								プラン投稿：<%= user.articles.count %> 件
+							</div>
 						</div>
 						<!-----------フォロー機能------------>
 						<div class="favorites" style="margin-bottom: 10px;">
