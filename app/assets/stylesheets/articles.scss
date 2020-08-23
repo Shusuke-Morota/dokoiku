@@ -119,6 +119,10 @@
       transform: translateY(-4px);
     }
 
+    div.article-button {
+      border-top: dashed 3px #00214d;
+    }
+
     .comment {
       font-weight: bold;
     }
@@ -181,6 +185,10 @@
 
     textarea#comment_content.form-control {
       border: solid 3px #00214d;
+    }
+
+    h5.card-header {
+      border-bottom: solid 3px #00214d;
     }
 
 }
