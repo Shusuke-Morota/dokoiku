@@ -61,12 +61,42 @@
 	    font-weight: bold;
     }
 
-    .index-username a {
-	    color: black;
+    div.card {
+        border: solid 3px #00214d;
     }
 
-    .index-username a:hover {
+    .index-user-name {
+        border-bottom: dashed 3px #00214d;
+    }
+
+    .index-user-name a {
+        color: #00214d;
+        font-size: 20px;
+    }
+
+    .index-user-name a:hover {
 	    text-decoration: none;
+    }
+
+    div.users-index-article-count {
+        border-bottom: dashed 3px #00214d;
+        margin-top: 20px;
+    }
+
+    a.btn.btn-primary {
+        background-color: tomato;
+        border: solid 3px #00214d;
+        border-radius: 50px;
+    }
+
+    a.btn.btn-outline-primary {
+        border: solid 3px #00214d;
+        border-radius: 50px;
+        color: #00214d;
+    }
+
+    a.btn.btn-outline-primary a:hover {
+        background-color: white;
     }
 }
 
