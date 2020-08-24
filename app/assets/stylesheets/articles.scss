@@ -31,6 +31,10 @@
         border-bottom: solid 3px #00214d;
     }
 
+    td {
+        border-bottom: solid 3px #00214d;
+    }
+
     .article-title a {
         color: black;
     }
@@ -242,6 +246,9 @@
 
   input.btn.btn-success.btn-block {
     border: solid 3px #00214d;
+    background-color: tomato;
+    border-radius: 50px;
+    font-weight: bold;
   }
 
 

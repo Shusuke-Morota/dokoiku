@@ -87,12 +87,14 @@
         background-color: tomato;
         border: solid 3px #00214d;
         border-radius: 50px;
+        font-weight: bold;
     }
 
     a.btn.btn-outline-primary {
         border: solid 3px #00214d;
         border-radius: 50px;
         color: #00214d;
+        font-weight: bold;
     }
 
     a.btn.btn-outline-primary a:hover {
@@ -108,6 +110,7 @@
 
     h2.page-title {
         color: #00214d;
+        font-weight: bold;
     }
 
     div.card {
@@ -175,12 +178,43 @@
      users/edit
 ===================*/
 
-input.btn.btn-success.btn-block {
-	background-color: tomato;
-	border: solid 1px tomato;
-	border-radius: 45px;
-	font-weight: bold;
-	margin-bottom: 30px;
+#users-edit {
+
+    h2.users-edit-title {
+        color: #00214d;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    label {
+        color: #00214d;
+        font-weight: bold;
+    }
+
+    input#user_name.form-control {
+        border: solid 3px #00214d;
+    }
+
+    input#user_email.form-control {
+        border: solid 3px #00214d;
+    }
+
+    textarea#user_profile.form-control {
+        border: solid 3px #00214d;
+    }
+
+    input#user_profile_image.form-control {
+        border: solid 3px #00214d;
+    }
+
+    input.btn.btn-success.btn-block {
+        background-color: tomato;
+        border: solid 3px #00214d;
+        border-radius: 45px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 
