@@ -45,12 +45,17 @@
         width: 660px;
       }
 
+      input#q.form-control {
+        border: solid 4px #00214d;
+        height: 55px;
+      }
+
       button.btn.btn-primary {
         background-color: tomato;
-        border: solid 1px tomato;
+        border: solid 4px #00214d;
         border-radius: 0 45px 45px 0;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 23px;
       }
     }
 
