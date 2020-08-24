@@ -30,7 +30,7 @@
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-3">
-			<h3 class="category-header">カテゴリーから探す</h3>
+			<h3 class="homes-categories-title">カテゴリーから探す</h3>
 			<div class="row">
 				<% @categories.each do |category| %>
 				<div class="col-6 category">
@@ -46,7 +46,7 @@
 		</div>
 
 		<div class="col-6">
-			<h3 class="new-articles">新着プラン</h3>
+			<h3 class="homes-articles-title">新着プラン</h3>
 			<% @articles.each do |article| %>
 			<div class="card" style="box-shadow: 0 0 8px gray;">
 				<div class="card-body">
@@ -85,13 +85,12 @@
 		</div>
 
 		<div class="col-3">
-			<h3 class="article-ranks">いいねランキング</h3>
+			<h3 class="homes-ranks-title">いいねランキング</h3>
 			<% @all_ranks.each.with_index(1) do |article, i| %>
 			<table class="table table-hover">
 				<thead class="ranks-title">
 					<tr>
 						<th scope="col">第 <%= i %> 位</th>
-						<th scope="col"></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
