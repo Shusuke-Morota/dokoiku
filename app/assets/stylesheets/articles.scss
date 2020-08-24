@@ -200,8 +200,8 @@
 
 .slick-dots {
   li {
-    font-size: 20px !important;
-    button:before {
+      font-size: 20px !important;
+      button:before {
       content: "●" !important;
       font-size: 25px !important;
       color: tomato !important;
@@ -241,3 +241,32 @@
 #article_article_images_images {
 	display: none;
 	}
+
+/*===================
+   articles/edit
+===================*/
+
+#articles-edit {
+
+  h2.articles-edit-title {
+      font-weight: bold;
+      color: #00214d;
+  }
+
+  label {
+      color: #00214d;
+      font-weight: bold;
+  }
+
+  input#article_title.form-control {
+      border: solid 3px #00214d;
+  }
+
+  textarea#article_body.form-control {
+      border: solid 3px #00214d;
+  }
+
+  input.btn.btn-success.btn-block {
+      border: solid 3px #00214d;
+  }
+}
