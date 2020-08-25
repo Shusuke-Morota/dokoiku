@@ -18,6 +18,18 @@
 @import "slick-theme";
 @import "slick";
 
+
+/*===================
+    app / common
+===================*/
+
+#home-top, #users-index, #users-show, #users-edit, #articles-index, #articles-show, #articles-edit,
+#articles-new {
+
+  background-color: #fef6e4;
+}
+
+
 div.alert.alert-primary {
 	margin-bottom: 0;
 	text-align: center;
