@@ -1,7 +1,8 @@
 
 <div class="container mt-5">
-	<div class="row" style="margin-left: 200px">
-		<div class="col-xs-6">
+	<div class="row">
+		<div class="col-6">
+			<h2 class="categories-index-add-title">カテゴリーの追加</h2>
 			<%= form_with model: @category, local: true do |f| %>
 
 			<%= f.text_field :name, class:'form-control', placeholder: "カテゴリーを追加しよう" %><br>
@@ -9,9 +10,9 @@
 			<%= f.submit '追加する', class: 'btn btn-primary btn-block' %>
 			<% end %>
 		</div>
-		<div class="col-xs-6">
-			<h2 style="font-weight: bold; margin-left: 200px;">カテゴリー一覧</h2>
-			<table class="table" style="margin-left: 120px">
+		<div class="col-6">
+			<h2 class="categories-index-title">カテゴリー一覧</h2>
+			<table class="table">
 				<thead>
 					<tr>
 						<th></th>
