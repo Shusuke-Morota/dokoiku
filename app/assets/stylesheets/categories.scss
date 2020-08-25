@@ -4,28 +4,37 @@
 
 
 /*===================
-category / show
+  categories / show
 ===================*/
 
-.header {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+#categories-show {
 
-.category-show-title {
-    border-bottom: solid 1px lightgray;
-    font-weight: bold;
-    text-align: center;
-}
+    h2.categories-show-title {
+        color: #00214d;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
 
-.category-show-body {
-    font-weight: bold;
-    text-align: center;
+    .card {
+        border: solid 4px #00214d;
+    }
+
+    div.categories-show-article-title {
+        border-top: solid 3px #00214d;
+        border-bottom: dashed 3px #00214d;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .category-show-body {
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
 
 /*===================
-category / show
+ categories / index
 ===================*/
 
 input.btn.btn-primary.btn-block {

@@ -5,15 +5,15 @@
 	<div class="container mt-5">
 
 		<% if @articles.length == 0 %>
-		  <h2 class="category-header">お探しのページは見つかりませんでした。</h2>
+		  <h2 class="categories-show-title">お探しのページは見つかりませんでした。</h2>
 		<% else %>
-		  <h2 class="category-header">【 <%= @category.name %> 】カテゴリーのプラン</h2>
+		  <h2 class="categories-show-title">【 <%= @category.name %> 】カテゴリーのプラン</h2>
 		<% end %>
 
 		<div class="row">
 			<% @articles.each do |article| %>
 			<div class="col-3">
-				<div class="card" style="box-shadow: 0 0 8px gray;">
+				<div class="card">
 					<div class="category-card-content">
 						<div class="card-image">
 							<div class="category-show-image">
@@ -22,7 +22,7 @@
 								<%= attachment_image_tag article.article_images.first, :image, :fill, 350, 400, format: 'jpeg', class:"img-fluid mx-auto"  %>
 								<% end %>
 								<% end %>
-								<div class="category-show-title">
+								<div class="categories-show-article-title">
 									タイトル：<%= truncate(article.title, length: 10) %>
 								</div>
 								<div class="category-show-body">
