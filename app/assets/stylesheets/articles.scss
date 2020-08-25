@@ -308,4 +308,35 @@
   input.btn.btn-success.btn-block {
       border: solid 3px #00214d;
   }
+
+  input.btn.btn-success.btn-block {
+    border: solid 3px #00214d;
+    background-color: tomato;
+    border-radius: 50px;
+    font-weight: bold;
+  }
+
+
+  #cover-image {
+    cursor: pointer;
+  }
+
+  .article-image {
+    border-radius: 5px;
+    filter: brightness(50%);
+    height: 220px;
+    width: 100%;
+  }
+
+  .relative {
+    position: relative;
+
+    i {
+       position: absolute;
+       top: 43%;
+       left: 45%;
+       color: white;
+       font-size: 55px;
+    }
+  }
 }
