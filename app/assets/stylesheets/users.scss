@@ -232,6 +232,46 @@
    users/following
 ===================*/
 
+#users-following {
+
+    h2.following-index-title {
+        color: #00214d;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    th {
+        text-align: center;
+        border-top: solid 3px #00214d;
+        border-bottom: solid 3px #00214d;
+    }
+
+    img.attachment.user.profile_image.img-fluid {
+        border: solid 3px #00214d;
+        box-shadow: 0 0 8px gray;
+    }
+
+    td {
+        text-align: center;
+        border-top: solid 3px #00214d;
+        border-bottom: solid 3px #00214d;
+    }
+
+    td.following-user-name  {
+        font-weight: bold;
+        line-height: 100px;
+    }
+
+    td.following-user-name a {
+        color: #00214d;
+    }
+
+    td.following-profile {
+        color: #00214d;
+        line-height: 100px;
+    }
+}
+
 
 
 /*===================
