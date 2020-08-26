@@ -2,30 +2,38 @@
 
 <div class="container mt-5">
 	<div class="row">
-		<h3 class="header">
-			<i class="far fa-user"></i><strong><%= @user.name %></strong>さんがフォローしているユーザー
-		</h3>
-	</div>
-	<div class="row mt-5" style="margin-left: 150px;">
-		<% @followings.each do |following| %>
-		<div class="col-3" style="border-bottom: solid 1px #E8E8E8; margin: 0 20px 20px 0;">
-			<table>
-				<tbody>
+		<div class="col-8 mx-auto">
+			<h2 class="following-index-title"><%= @user.name %>さんのフォロワー</h2>
+			<table class="table table-hover">
+				<thead class="follower-header">
 					<tr>
-						<td class="following-user-profile-image">
+						<th scope="col">ユーザーアイコン</th>
+						<th scope="col">ユーザー名</th>
+						<th scope="col">プロフィール</th>
+					</tr>
+				</thead>
+				<tbody class="following-body">
+					<% @followings.each do |following| %>
+					<tr>
+						<td class="followings-user-profile-image">
 							<%= link_to user_path(following) do %>
-							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid mx-auto" %>
+							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid" %>
 							<% end %>
 						</td>
-						<td class="following-user-name">
+
+						<td class="followings-user-name">
 							<%= link_to user_path(following) do %>
 							<%= following.name %>
 							<% end %>
 						</td>
+
+						<td class="followings-profile">
+							<%= truncate(following.profile, length: 15) %>
+						</td>
 					</tr>
+					<% end %>
 				</tbody>
 			</table>
 		</div>
-		<% end %>
 	</div>
 </div>
