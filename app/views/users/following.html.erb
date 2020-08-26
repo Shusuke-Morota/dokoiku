@@ -3,7 +3,7 @@
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-8 mx-auto">
-			<h2 class="following-index-title"><%= @user.name %>さんのフォロワー</h2>
+			<h2 class="following-index-title"><%= @user.name %>さんのフォロー中</h2>
 			<table class="table table-hover">
 				<thead class="follower-header">
 					<tr>
@@ -15,19 +15,19 @@
 				<tbody class="following-body">
 					<% @followings.each do |following| %>
 					<tr>
-						<td class="followings-user-profile-image">
+						<td class="following-user-profile-image">
 							<%= link_to user_path(following) do %>
 							<%= attachment_image_tag following, :profile_image, :fill, 75, 75, fallback: "no-image.png", size: "100x100", format:'png', class:"img-fluid" %>
 							<% end %>
 						</td>
 
-						<td class="followings-user-name">
+						<td class="following-user-name">
 							<%= link_to user_path(following) do %>
 							<%= following.name %>
 							<% end %>
 						</td>
 
-						<td class="followings-profile">
+						<td class="following-profile">
 							<%= truncate(following.profile, length: 15) %>
 						</td>
 					</tr>
