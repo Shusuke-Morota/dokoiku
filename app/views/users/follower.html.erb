@@ -9,6 +9,7 @@
 					<tr>
 						<th scope="col">ユーザーアイコン</th>
 						<th scope="col">ユーザー名</th>
+						<th scope="col">プロフィール</th>
 					</tr>
 				</thead>
 				<tbody class="follower-body">
@@ -24,6 +25,10 @@
 							<%= link_to user_path(follower) do %>
 							<%= follower.name %>
 							<% end %>
+						</td>
+
+						<td class="follower-profile">
+							<%= truncate(follower.profile, length: 15) %>
 						</td>
 					</tr>
 					<% end %>
