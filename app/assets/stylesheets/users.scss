@@ -164,11 +164,11 @@
     }
 
     a.btn.btn-warning {
-		background-color: tomato;
+		background-color: #fde24f;
 		border: solid 3px #00214d;
 		border-radius: 45px;
 		font-weight: bold;
-		color: white;
+		color: #00214d;
 		transition: .3s;
     }
 
@@ -217,9 +217,10 @@
     }
 
     input.btn.btn-success.btn-block {
-        background-color: tomato;
+        background-color: #fde24f;
         border: solid 3px #00214d;
         border-radius: 45px;
+        color: #00214d;
         font-weight: bold;
         margin-top: 30px;
         margin-bottom: 30px;
