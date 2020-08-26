@@ -232,37 +232,46 @@
    users/following
 ===================*/
 
-.following-user-name {
-	font-weight: bold;
-	font-size: 20px;
-}
 
-.following-user-name a {
-	color: black;
-	margin-left: 30px;
-	justify-content: center;
-}
-
-.following-user-name a:hover {
-	text-decoration: none;
-}
 
 /*===================
    users/follower
 ===================*/
 
-.follower-user-name {
-	font-weight: bold;
-	font-size: 20px;
+#users-follower {
+
+    h2.follower-index-title {
+        color: #00214d;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    th {
+        text-align: center;
+        border-top: solid 3px #00214d;
+        border-bottom: solid 3px #00214d;
+    }
+
+    img.attachment.user.profile_image.img-fluid {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+        border-top: solid 3px #00214d;
+        border-bottom: solid 3px #00214d;
+    }
+
+    td.follower-user-name  {
+        font-weight: bold;
+        line-height: 100px;
+    }
+
+    td.follower-user-name a {
+        color: #00214d;
+    }
 }
 
-.follower-user-name a {
-	color: black;
-	margin-left: 30px;
-}
 
-.follower-user-name a:hover {
-	text-decoration: none;
-}
 
 
