@@ -1,0 +1,54 @@
+/*===================
+ registrations / new
+===================*/
+
+#registrations-new {
+
+	h2.registrations-title {
+	    color: #00214d;
+        font-weight: bold;
+        text-align: center;
+	}
+
+	label {
+	    color: #00214d;
+        font-weight: bold;
+	}
+
+	input#user_email.form-control {
+	    margin-bottom: 20px;
+	    border: solid 3px #00214d;
+	    border-radius: 50px;
+	}
+
+	input#user_password.form-control {
+	    margin-bottom: 20px;
+	    border: solid 3px #00214d;
+	    border-radius: 50px;
+	}
+
+	em {
+	    color: #00214d;
+	    font-weight: bold;
+	}
+
+	input#user_password_confirmation.form-control {
+	    margin-bottom: 45px;
+	    border: solid 3px #00214d;
+
+	}
+
+	input.btn.btn-success.btn-block {
+        background-color: tomato;
+	    border: solid 3px #00214d;
+	    border-radius: 50px;
+	    color: white;
+	    font-weight: bold;
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	}
+
+	a.btn.btn-success {
+	    margin-bottom: 50px;
+	}
+}
