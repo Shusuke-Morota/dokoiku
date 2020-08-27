@@ -15,6 +15,12 @@
         font-weight: bold;
 	}
 
+	input#user_name.form-control {
+	    margin-bottom: 20px;
+	    border: solid 3px #00214d;
+	    border-radius: 50px;
+	}
+
 	input#user_email.form-control {
 	    margin-bottom: 20px;
 	    border: solid 3px #00214d;
@@ -22,6 +28,12 @@
 	}
 
 	input#user_password.form-control {
+	    margin-bottom: 20px;
+	    border: solid 3px #00214d;
+	    border-radius: 50px;
+	}
+
+	input#user_password_confirmation.form-control {
 	    margin-bottom: 20px;
 	    border: solid 3px #00214d;
 	    border-radius: 50px;
