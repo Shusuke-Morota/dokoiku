@@ -30,7 +30,13 @@
 #users-following, #sessions-new, #registrations-new {
 
   background-color: #fef6e4;
+
 }
+
+
+/*===================
+    app / header
+===================*/
 
 
     div.alert.alert-primary {
@@ -44,6 +50,10 @@
 
     h2 {
         text-align: center;
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        background-color: #f3d2c1;
     }
 
     .nav-item {
@@ -68,7 +78,7 @@
     }
 
 /*===================
-       footer
+    app / footer
 ===================*/
 
     .wrapper{
