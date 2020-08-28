@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   def index
     @category = Category.new
-    @categories = Category.all
+    @categories = Category.all.page(params[:page]).per(10)
     # @article = Article.find(params[:id])
   end
 
