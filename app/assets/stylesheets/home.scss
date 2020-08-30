@@ -251,46 +251,57 @@
      top / about
 ===================*/
 
+#home-about {
+
     .about-header {
-      position: relative;
+        position: relative;
     }
 
     .about-header p {
-      border-bottom: solid 3px #00214d;
-      color: tomato;
-      font-weight: bold;
-      font-size: 2em;
-      position: absolute;
-      top: 10%;
-      left: 18%;
+        border-bottom: solid 3px #00214d;
+        color: tomato;
+        font-weight: bold;
+        font-size: 2em;
+        position: absolute;
+        top: 10%;
+        left: 18%;
     }
 
     p.about-text-1 {
-      top: 25%;
-      left: 256px;
+        top: 25%;
+        left: 256px;
     }
 
     p.about-text-2 {
-      top: 39%;
-      left: 259px;
+        top: 39%;
+        left: 259px;
     }
 
     p.about-text-3 {
-      top: 53%;
+        top: 53%;
     }
 
     p.about-text-4 {
-      top: 67%;
+        top: 67%;
     }
 
     p.about-text-5 {
-      top: 81%;
+        top: 81%;
     }
 
     img.about_image {
-      width: 100%;
-      opacity: 0.1;
+        width: 100%;
+        opacity: 0.1;
     }
+
+    a.btn.btn-primary.btn-block {
+        border: solid 3px #00214d;
+        border-radius: 50px;
+        background-color: #fde24f;
+        color: #00214d;
+        font-weight: bold;
+    }
+}
 
 
 
