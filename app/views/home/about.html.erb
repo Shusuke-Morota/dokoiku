@@ -29,13 +29,19 @@
 
 <div class="container mt-5">
 	<div class="row">
-		<div col-8 mx-auto>
-			<div class="signup-link">
-				<p><%= link_to "まだ登録がお済みではない方はこちらから", new_user_registration_path, class: "btn btn-primary btn-block" %></p>
-			</div>
+		<div class="col-6 mx-auto">
+			<div class="about-links">
+				<div class="signup-link">
+					<p>
+						<%= link_to "まだ登録がお済みではない方はこちらから", new_user_registration_path, class: "btn btn-primary btn-block" %>
+					</p>
 
-			<div class="login-link">
-				<p><%= link_to "既に登録がお済みの方はこちらから", new_user_session_path, class: "btn btn-primary btn-block" %></p>
+					<div class="login-link">
+						<p>
+							<%= link_to "既に登録がお済みの方はこちらから", new_user_session_path, class: "btn btn-primary btn-block" %>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
