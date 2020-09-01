@@ -68,8 +68,6 @@ Vagrant + VirtualBox
 
 
 ## 設計書
-https://docs.google.com/spreadsheets/d/1Qj0jbzDfBEpLUkR1R7Sy717zejsw02h_nVagqx2uRW4/edit?usp=sharing
-
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1Wx5Ym64v4Lun0f-BLKOSz3KVAtX7vODP9OwhSn5YfFw/edit#gid=0
