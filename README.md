@@ -43,7 +43,29 @@ Vagrant + VirtualBox
 ・kaminari  
 ・bootstrap5  
 ・refile / refile-mini_magick  
-・ransack
+・ransack  
+
+### 主な機能
+・ユーザー登録機能  
+　新規登録、ログイン、ログアウト  
+　プロフィールの編集  
+・プランの投稿機能  
+　新規投稿  
+　プランの編集、削除  
+・コメント機能  
+　新規投稿  
+　コメントの削除  
+　コメントのもっと見るボタン(非同期通信)  
+・カテゴリー機能  
+　カテゴリーの追加  
+　カテゴリーの編集、削除  
+・プランに対するいいね機能(非同期通信)  
+・フォロー機能(非同期通信)  
+・いいねランキング機能  
+・検索機能  
+　ユーザー検索  
+　プラン検索  
+
 
 ## 設計書
 https://docs.google.com/spreadsheets/d/1Qj0jbzDfBEpLUkR1R7Sy717zejsw02h_nVagqx2uRW4/edit?usp=sharing
