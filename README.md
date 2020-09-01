@@ -17,6 +17,34 @@
 ### 主な利用シーン
 出かける前、出かけている時、出かけた後
 
+## 使用技術
+
+### 使用言語
+
+・Ruby 2.5.7  
+・Rails 5.2.4.3  
+・Javascript(jQuery)  
+
+### 開発環境
+
+Vagrant + VirtualBox
+
+### インフラ
+
+・AWS(VPC, EC2, RDS, CloudWatch, Route53)  
+・MySQL2  
+・Nginx(Webサーバ)  
+
+### その他の技術(gem等)
+
+・pry-byebug  
+・dotenv-rails  
+・devise  
+・kaminari  
+・bootstrap5  
+・refile / refile-mini_magick  
+・ransack
+
 ## 設計書
 https://docs.google.com/spreadsheets/d/1Qj0jbzDfBEpLUkR1R7Sy717zejsw02h_nVagqx2uRW4/edit?usp=sharing
 
